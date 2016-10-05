@@ -2,7 +2,7 @@ body{
 	background-image: url(INDEXBG.jpg);
 	background-attachment: fixed;
 	background-position: bottom center;
-	background-size: auto 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
