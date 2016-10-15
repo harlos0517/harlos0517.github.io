@@ -16,13 +16,11 @@
 	"buffers":
 	[
 		{
-			"contents": "<!DOCTYPE html>\n<html>\n	<head>\n		<meta charset=\"UTF-8\"/>\n		<title>Deemo Harlos</title>\n		<link href=\"index.css\" rel=\"stylesheet\"/>\n		<script src=\"index.js\"></script>\n		<script type=\"text/javascript\" src=\"jquery-2.2.4.js\"></script>\n</script>\n	</head>\n	<body>\n		<div class=\"card\">\n			<div class=\"name\">洪梓彧</div>\n			<div class=\"engname\">Bowen Hung</div>\n			<img class=\"headpic\" src=\"https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/13615466_510255045846428_5671986999977840485_n.jpg?oh=a329bb15553de85c966fca30fc7df211&oe=585C9381\">\n			<div class=\"fblink\">\n				<a href=\"https://www.facebook.com/profile.php?id=100005858100921\" target=\"blank\">\n					<div class=\"fb1\">Facebook</div>\n					<div class=\"fb2\">Deemo Harlos</div>\n				</a>\n			</div>\n		</div>\n		\n	</body>\n</html>",
 			"file": "index.html",
-			"file_size": 788,
-			"file_write_time": 131189288472697559,
 			"settings":
 			{
-				"buffer_size": 762,
+				"buffer_size": 759,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -30,7 +28,8 @@
 			"file": "index.css",
 			"settings":
 			{
-				"buffer_size": 1257,
+				"buffer_size": 1270,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -39,14 +38,7 @@
 			"settings":
 			{
 				"buffer_size": 106,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "jquery-2.2.4.js",
-			"settings":
-			{
-				"buffer_size": 257550,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -100,6 +92,7 @@
 	},
 	"file_history":
 	[
+		"/C/AppServ/www/DeemoHarlos/jquery-2.2.4.js",
 		"/C/AppServ/www/MOOCs/index.html",
 		"/C/AppServ/www/MOOCs/index.css",
 		"/C/AppServ/www/ANGULARJS/LESSON2/js/directives/appInfo.js",
@@ -170,20 +163,21 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 762,
+						"buffer_size": 759,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								278,
-								278
+								742,
+								742
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -204,15 +198,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1257,
+						"buffer_size": 1270,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								134,
-								134
+								35,
+								35
 							]
 						],
 						"settings":
@@ -225,7 +219,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -259,36 +253,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "jquery-2.2.4.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 257550,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								61,
-								61
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -296,7 +261,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -328,13 +293,13 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.510980966325,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.732624113475,
+			0.246698187549,
 			1.0
 		]
 	},
@@ -347,7 +312,7 @@
 	"project": "DeemoHarlos.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -381,7 +346,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 2,
 	"settings":
 	{
 		"last_automatic_layout":
