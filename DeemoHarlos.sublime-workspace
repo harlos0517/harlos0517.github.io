@@ -4,8 +4,40 @@
 		"selected_items":
 		[
 			[
+				"background",
+				"background-position"
+			],
+			[
 				"back",
 				"background-position"
+			],
+			[
+				"backgrou",
+				"background-position"
+			],
+			[
+				"head",
+				"headpicSlideshow"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"hea",
+				"headpic"
+			],
+			[
+				"headpi",
+				"headpicSlideshow"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"left",
+				"margin-left"
 			],
 			[
 				"ba",
@@ -16,19 +48,35 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "index.css",
 			"settings":
 			{
-				"buffer_size": 759,
+				"buffer_size": 1382,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "index.css",
+			"file": "css/debug.css",
 			"settings":
 			{
-				"buffer_size": 1270,
+				"buffer_size": 75,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/structure.css",
+			"settings":
+			{
+				"buffer_size": 943,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1499,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -37,8 +85,15 @@
 			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 106,
-				"encoding": "UTF-8",
+				"buffer_size": 112,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/headpic.js",
+			"settings":
+			{
+				"buffer_size": 403,
 				"line_ending": "Windows"
 			}
 		}
@@ -92,6 +147,15 @@
 	},
 	"file_history":
 	[
+		"/C/AppServ/www/DeemoHarlos/js/index.js",
+		"/C/AppServ/www/DeemoHarlos/css/index.css",
+		"/C/AppServ/www/DeemoHarlos/debug.css",
+		"/C/AppServ/www/DeemoHarlos/index.css",
+		"/C/AppServ/www/DeemoHarlos/structure.css",
+		"/C/AppServ/www/DeemoHarlos/headpic.js",
+		"/C/AppServ/www/DeemoHarlos/index.js",
+		"/C/AppServ/www/DeemoHarlos/headpic.css",
+		"/C/AppServ/www/DeemoHarlos/flex.css",
 		"/C/AppServ/www/DeemoHarlos/jquery-2.2.4.js",
 		"/C/AppServ/www/MOOCs/index.html",
 		"/C/AppServ/www/MOOCs/index.css",
@@ -120,7 +184,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -134,6 +198,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"animation:",
+			"3000ms",
+			"colflex umn",
+			" flex",
+			" item",
+			"-",
+			"0px",
 			"  ",
 			"    ",
 			" +"
@@ -159,67 +230,88 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 759,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								742,
-								742
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 1,
 					"file": "index.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1270,
+						"buffer_size": 1382,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								35,
-								35
+								688,
+								688
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/debug.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 75,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/structure.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -229,20 +321,56 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
-					"file": "index.js",
+					"buffer": 3,
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 106,
+						"buffer_size": 1499,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								106,
-								106
+								1464,
+								1464
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 555.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 112,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -255,13 +383,41 @@
 					},
 					"stack_index": 0,
 					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/headpic.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -293,13 +449,13 @@
 		"cols":
 		[
 			0.0,
-			0.510980966325,
+			0.357247437775,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.246698187549,
+			0.588888888889,
 			1.0
 		]
 	},
@@ -312,7 +468,7 @@
 	"project": "DeemoHarlos.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":

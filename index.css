@@ -1,82 +1,68 @@
 body{
-	background-image: url(INDEXBG.jpg);
-	background-attachment: fixed;
-	background-position: bottom center;
-	background-size: cover;
+	background-color: #CCEEFF;
+}
+.item{
+	opacity: 1;
+	transition: opacity 400ms;
+}
+.item:hover{
+	opacity: 0.6;
+}
+#links>a{
+	background-color: #EEEEEE;
+	background-size:contain;
+	background-origin: content-box;
+	background-position: bottom right;
 	background-repeat: no-repeat;
 }
-
-
-.card {
-	border: 3px solid darkblue;
-	border-radius: 20px;
-	max-width: 300px;
-	max-height: 600px;
-	padding: 10px 25px;
-	box-sizing: content-box;
-	background-color: lightblue;
-	box-shadow: 0 0 40px grey;
+#FBlink{background-image:url(pic/facebook.png);
+	background-color: #3C5A99!important;}
+#GHlink{background-image:url(pic/github.png);}
+#MSlink{background-image:url(pic/musescore.png);}
+#headpic{
 	position: relative;
-	top: 20px;
-	left: 20px;
 }
-
-.name {
-	font-size: 50px;
-	text-align: center;
-	font-family: 微軟正黑體;
+#headpic>div{
+	position: absolute;
+	width:calc( 100% - 2vmax );
+	height:calc( 100% - 2vmax );
+	background-size:cover;
+	background-repeat: no-repeat;
+	transition: opacity 1000ms;
+	opacity:0;
 }
-
-.engname {
-	font-size: 30px;
-	text-align: center;
-	font-family: 微軟正黑體;
+#headpic1{
+	background-image:url(pic/head1.jpg);
+	opacity:1;
+	background-position: top center;
 }
-
-.headpic {
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	box-shadow: 5px 5px 20px grey;
-	margin: 20px 0px;
+#headpic2{
+	background-image:url(pic/head2.jpg);
+	background-position: center left;
 }
-
-.fb1 {
-	font-family: 微軟正黑體;
-	font-size: 30px;
-	text-align: center;
-	text-decoration: none;
+#headpic3{
+	background-image:url(pic/head3.jpg);
+	background-position: top left;
 }
-
-.fb2 {
-	font-family: Brush Script MT;
-	font-size: 20px;
-	text-align: center;
-	text-decoration: none;
+#headpic4{
+	background-image:url(pic/head4.jpg);
+	background-position: top right;
 }
-
-.fblink {
-	background-color: lightgreen;
-	width: 170px;
-	margin: 0 55px 10px 55px;
-	padding: 10px 10px 10px 10px;
-	border-radius: 10px;
-	box-shadow: 2px 2px darkgreen;
+#headpic5{
+	background-image:url(pic/head5.jpg);
+	background-position: top center;
 }
-
-.fblink:hover {
-	background-color: rgb(114, 192, 116);
+#headpic6{
+	background-image:url(pic/head6.jpg);
+	background-position: center;
 }
-
-.fblink:active {
-	box-shadow: -2px -2px darkgreen;
-	position: relative;
-	top: 4px;
-	left: 4px;
+#content>*>*{
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-origin: content-box;
 }
-
-a {
-	text-decoration: none;
-	color: brown;
-	display: block;
+#intro{
+	background-color: #FFFFCC;
+	background-image:url(pic/intro.png);
 }
