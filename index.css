@@ -1,14 +1,10 @@
 body{
-	background-color: #CCEEFF;
+	background-color: #EEFFFF;
 }
 .item{
-	opacity: 1;
-	transition: opacity 400ms;
+	background-color: rgba(0,0,0,.1);
 }
-.item:hover{
-	opacity: 0.6;
-}
-#links>a{
+#profile-links>a{
 	background-color: #EEEEEE;
 	background-size:contain;
 	background-origin: content-box;
@@ -30,6 +26,7 @@ body{
 	background-repeat: no-repeat;
 	transition: opacity 1000ms;
 	opacity:0;
+	z-index:100;
 }
 #headpic1{
 	background-image:url(pic/head1.jpg);
@@ -61,8 +58,56 @@ body{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-origin: content-box;
+	border: solid 3px rgba(0,0,0,0);
+	transition: border 200ms,
+		transform 200ms;
 }
-#intro{
+#content>*>*:hover{
+	border: solid 3px;
+}
+#project{
 	background-color: #FFFFCC;
-	background-image:url(pic/intro.png);
+	background-image:url(pic/project.png);
+}
+#project:hover{
+	border-color: #FFFF00;
+}
+#cs{
+	background-color: #CCEEFF;
+	background-image:url(pic/cs.png);
+}
+#cs:hover{
+	border-color: #0000FF;
+}
+#timeline{
+	background-color: #DDCCFF;
+	background-image:url(pic/timeline.png);
+}
+#timeline:hover{
+	border-color: #8800FF;
+}
+#music{
+	background-color: #FFCCCC;
+	background-image:url(pic/music.png);
+}
+#music:hover{
+	border-color: #FF0000;
+}
+#photo{
+	background-color: #CCFFCC;
+	background-image:url(pic/photo.png);
+}
+#photo:hover{
+	border-color: #00FF00;
+}
+#links{
+	background-color: #FFEECC;
+	background-image:url(pic/links.png);
+}
+#links:hover{
+	border-color: #FFAA00;
+}
+#content>*>*:active{
+	border: solid 3px black;
+	transform: scale(0.95);
 }

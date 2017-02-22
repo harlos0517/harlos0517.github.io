@@ -43,17 +43,12 @@ body{
 	   -moz-flex:7 0 0;
 			flex:7 0 0;
 }
-#links{
+#profile-links{
 	-webkit-flex:3 0 0;
 	   -moz-flex:3 0 0;
 			flex:3 0 0;
 }
-#links>a{
-	-webkit-flex:1 0 0;
-	   -moz-flex:1 0 0;
-			flex:1 0 0;
-}
-#content>.row,#content>div>.item{
+#profile-links>a,#content>.row,#content>div>.item{
 	-webkit-flex:1 0 0;
 	   -moz-flex:1 0 0;
 			flex:1 0 0;
