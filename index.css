@@ -53,6 +53,20 @@ body{
 	background-image:url(pic/head6.jpg);
 	background-position: center;
 }
+#intro{
+	z-index:110!important;
+	background-color: rgba(0,0,0,.4);
+	font-size: 12pt;
+	color:white;
+	overflow-y: scroll;
+	transition: opacity 500ms!important;
+}
+#intro::-webkit-scrollbar {
+	display: none;
+}
+#intro:hover{
+	opacity: 1;
+}
 #content>*>*{
 	background-size:contain;
 	background-repeat: no-repeat;
