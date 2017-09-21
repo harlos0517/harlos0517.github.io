@@ -1,0 +1,21 @@
+div.flex{
+	display:flex;
+}
+body{
+	margin:0;
+}
+.column{
+	-webkit-flex-direction:column;
+	   -moz-flex-direction:column;
+			flex-direction:column;
+}
+.row{
+	-webkit-flex-direction:row;
+	   -moz-flex-direction:row;
+			flex-direction:row;
+}
+.column>*{margin-bottom:1vmax;}
+.row>*{margin-right:1vmax;}
+.column>*:last-child{margin-bottom:0;}
+.row>*:last-child{margin-right:0;}
+.pad{padding:1vmax;}
