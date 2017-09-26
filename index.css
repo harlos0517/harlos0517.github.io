@@ -1,0 +1,23 @@
+#main-background{
+	background-image: url(pic/head2.jpg);
+	background-size: cover;
+	background-position: left center;
+}
+#main-background>.filter{
+	height:100vh;
+	width:100%;
+	background-color: rgba(0,0,0,0.8);
+}
+#homepage{
+	align-items: center;
+	justify-content: center;
+}
+#headpic{
+	width:35vmin;
+	height:35vmin;
+	border-radius: 50%;
+	overflow: hidden;
+}
+#headpic>img{
+	width:100%;
+}
