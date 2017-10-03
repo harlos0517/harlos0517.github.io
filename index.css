@@ -21,3 +21,7 @@
 #headpic>img{
 	width:100%;
 }
+#name{
+	text-align: center;
+	font-size: 24pt;
+}
