@@ -1,127 +1,23 @@
-body{
-	background-color: #EEFFFF;
+#main-background{
+	background-image: url(pic/head2.jpg);
+	background-size: cover;
+	background-position: left center;
 }
-.item{
-	background-color: rgba(0,0,0,.1);
+#main-background>.filter{
+	height:100vh;
+	width:100%;
+	background-color: rgba(0,0,0,0.8);
 }
-#profile-links>a{
-	background-color: #EEEEEE;
-	background-size:contain;
-	background-origin: content-box;
-	background-position: bottom right;
-	background-repeat: no-repeat;
+#homepage{
+	align-items: center;
+	justify-content: center;
 }
-#FBlink{background-image:url(pic/facebook.png);
-	background-color: #3C5A99!important;}
-#GHlink{background-image:url(pic/github.png);}
-#MSlink{background-image:url(pic/musescore.png);}
 #headpic{
-	position: relative;
+	width:35vmin;
+	height:35vmin;
+	border-radius: 50%;
+	overflow: hidden;
 }
-#headpic>div{
-	position: absolute;
-	width:calc( 100% - 2vmax );
-	height:calc( 100% - 2vmax );
-	background-size:cover;
-	background-repeat: no-repeat;
-	transition: opacity 1000ms;
-	opacity:0;
-	z-index:100;
-}
-#headpic1{
-	background-image:url(pic/head1.jpg);
-	opacity:1;
-	background-position: top center;
-}
-#headpic2{
-	background-image:url(pic/head2.jpg);
-	background-position: center left;
-}
-#headpic3{
-	background-image:url(pic/head3.jpg);
-	background-position: top left;
-}
-#headpic4{
-	background-image:url(pic/head4.jpg);
-	background-position: top right;
-}
-#headpic5{
-	background-image:url(pic/head5.jpg);
-	background-position: top center;
-}
-#headpic6{
-	background-image:url(pic/head6.jpg);
-	background-position: center;
-}
-#intro{
-	z-index:110!important;
-	background-color: rgba(0,0,0,.4);
-	font-size: 12pt;
-	color:white;
-	overflow-y: scroll;
-	transition: opacity 500ms!important;
-}
-#intro::-webkit-scrollbar {
-	display: none;
-}
-#intro:hover{
-	opacity: 1;
-}
-#content>*>*{
-	background-size:contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-origin: content-box;
-	border: solid 3px rgba(0,0,0,0);
-	transition: border 200ms,
-		transform 200ms;
-}
-#content>*>*:hover{
-	border: solid 3px;
-}
-#project{
-	background-color: #FFFFCC;
-	background-image:url(pic/project.png);
-}
-#project:hover{
-	border-color: #FFFF00;
-}
-#cs{
-	background-color: #CCEEFF;
-	background-image:url(pic/cs.png);
-}
-#cs:hover{
-	border-color: #0000FF;
-}
-#timeline{
-	background-color: #DDCCFF;
-	background-image:url(pic/timeline.png);
-}
-#timeline:hover{
-	border-color: #8800FF;
-}
-#music{
-	background-color: #FFCCCC;
-	background-image:url(pic/music.png);
-}
-#music:hover{
-	border-color: #FF0000;
-}
-#photo{
-	background-color: #CCFFCC;
-	background-image:url(pic/photo.png);
-}
-#photo:hover{
-	border-color: #00FF00;
-}
-#links{
-	background-color: #FFEECC;
-	background-image:url(pic/links.png);
-}
-#links:hover{
-	border-color: #FFAA00;
-}
-#content>*>*:active{
-	border: solid 3px black;
-	transform: scale(0.95);
+#headpic>img{
+	width:100%;
 }
