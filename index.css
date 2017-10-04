@@ -4,24 +4,51 @@
 	background-position: left center;
 }
 #main-background>.filter{
-	height:100vh;
+	height:100%;
 	width:100%;
 	background-color: rgba(0,0,0,0.8);
 }
-#homepage{
-	align-items: center;
-	justify-content: center;
+#homepage>.wrapper{
+	flex: 0 0 70vh;
+	min-height: 400px; 
+	width:100%;
+}
+#profile{
+	flex: 4 0 0;
 }
 #headpic{
 	width:35vmin;
 	height:35vmin;
 	border-radius: 50%;
 	overflow: hidden;
+	box-shadow: white 0 0 50px;
+	animation: boxglow 5s infinite;
+}
+@keyframes boxglow{
+	from{box-shadow: white 0 0 20px;}
+	50%{box-shadow: white 0 0 120px;}
+	to{box-shadow: white 0 0 20px;}
 }
 #headpic>img{
 	width:100%;
 }
 #name{
+	padding-top: 30px;s
 	text-align: center;
 	font-size: 24pt;
+}
+
+#navbar{
+	flex:1 0 0;
+	padding: 0 
+}
+#navbar>*{
+	width: 100%;
+}
+#navbar>.buttons{
+
+}
+#navbar .button{
+	flex:0 1 150px;
+	text-align: center;
 }
