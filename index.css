@@ -9,12 +9,11 @@
 	background-color: rgba(0,0,0,0.8);
 }
 #homepage>.wrapper{
-	flex: 0 0 70vh;
-	min-height: 400px; 
+	flex: 0 0 80vh;
 	width:100%;
 }
 #profile{
-	flex: 4 0 0;
+	flex: 3 0 0;
 }
 #headpic{
 	width:35vmin;
@@ -25,30 +24,65 @@
 	animation: boxglow 5s infinite;
 }
 @keyframes boxglow{
-	from{box-shadow: white 0 0 20px;}
-	50%{box-shadow: white 0 0 120px;}
-	to{box-shadow: white 0 0 20px;}
+	from{box-shadow: rgba(255,255,255,.8) 0 0 50px 0px;}
+	50%{box-shadow: rgba(255,255,255,.8) 0 0 200px 50px;}
+	to{box-shadow: rgba(255,255,255,.8) 0 0 50px 0px;}
 }
 #headpic>img{
 	width:100%;
 }
 #name{
-	padding-top: 30px;s
+	padding-top: 4vh;
 	text-align: center;
 	font-size: 24pt;
+	font-family: serif;
 }
 
 #navbar{
 	flex:1 0 0;
-	padding: 0 
+	padding: 0;
 }
 #navbar>*{
 	width: 100%;
 }
-#navbar>.buttons{
-
-}
 #navbar .button{
-	flex:0 1 150px;
+	flex:0 1 130px;
 	text-align: center;
+	font-family: serif;
+	font-size: 12pt;
+	position: relative;
+	padding: 0 10px;
+}
+#navbar .buttonbg{
+	height: 150px;
+	width: 100%;
+	flex:0 1 150px;
+	position: absolute;
+	bottom: -67px;
+	left: 0;
+	background-image: url('pic/button.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	filter: brightness(100%);
+	backface-visibility: hidden;
+	opacity:0;
+	transition: all 300ms;
+}
+#navbar .button:hover>.buttonbg{
+	filter: brightness(200%);
+	opacity:1;
+}
+
+#line{
+	height: 5px;
+	background-color: white;
+	margin-top: 12px;
+	box-shadow: white 0 0px 7px 3px,
+		white 0 -8px 30px 3px;
+	opacity: 0.7;
+}
+#line>.wrapper{
+	height: 100%;
+	width: 100%;
+	overflow: visible;
 }
