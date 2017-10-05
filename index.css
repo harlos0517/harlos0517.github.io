@@ -58,7 +58,7 @@
 	width: 100%;
 	flex:0 1 150px;
 	position: absolute;
-	bottom: -67px;
+	bottom: -64px;
 	left: 0;
 	background-image: url('pic/button.png');
 	background-size: 100% 100%;
@@ -69,9 +69,16 @@
 	transition: all 300ms;
 }
 #navbar .button:hover>.buttonbg{
-	filter: brightness(200%);
+	filter: brightness(160%);
 	opacity:1;
+	animation: buttonglow 3s infinite;
 }
+@keyframes buttonglow{
+	from{filter: brightness(100%);}
+	50%{filter: brightness(160%);}
+	to{filter: brightness(100%);}
+}
+
 
 #line{
 	height: 5px;
@@ -80,6 +87,7 @@
 	box-shadow: white 0 0px 7px 3px,
 		white 0 -8px 30px 3px;
 	opacity: 0.7;
+	pointer-events: none;
 }
 #line>.wrapper{
 	height: 100%;
