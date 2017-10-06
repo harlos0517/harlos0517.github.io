@@ -4,6 +4,7 @@
 	background-position: left center;
 }
 #main-background>.filter{
+	position: absolute;
 	height:100%;
 	width:100%;
 	background-color: rgba(0,0,0,0.8);
