@@ -57,8 +57,8 @@
 	background-size: cover;
 	background-position: top center;
 	transition: transform 750ms, opacity 750ms;
-/*	opacity: 0;
-	transform: scale(0.7);*/
+	opacity: 0;
+	transform: scale(0.7);
 }
 @keyframes boxglow{
 	from{box-shadow: rgba(255,255,255,.8) 0 0 50px 0px;}
