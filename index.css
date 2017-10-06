@@ -1,20 +1,50 @@
-#main-background{
-	background-image: url(pic/head2.jpg);
-	background-size: cover;
-	background-position: left center;
-}
+/*MAIN BACKGROUND*/
 #main-background>.filter{
 	position: absolute;
 	height:100%;
 	width:100%;
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.7);
 }
-#homepage>.wrapper{
-	flex: 0 0 80vh;
+#main-background>.bg{
+	height:100%;
 	width:100%;
+	position: absolute;
 }
+#homebg{
+	background-image: url(pic/head4.jpg);
+	background-size: cover;
+	background-position: right center;
+}
+#codebg{
+	background-image: url(pic/head7.jpg);
+	background-size: cover;
+	background-position: bottom center;
+}
+#musicbg{
+	background-image: url(pic/head2.jpg);
+	background-size: cover;
+	background-position: left center;
+}
+#photobg{
+	background-image: url(pic/head8.jpg);
+	background-size: cover;
+	background-position: center;
+}
+#timelinebg{
+	background-image: url(pic/head3.jpg);
+	background-size: cover;
+	background-position: left center;
+}
+#diarybg{
+	background-image: url(pic/head6.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+/*HOMEPAGE*/
 #profile{
-	flex: 3 0 0;
+	flex: 0 0 calc(100% - 70px);
+	padding: 10px 0 0 0;
 }
 #headpic{
 	width:35vmin;
@@ -23,14 +53,17 @@
 	overflow: hidden;
 	box-shadow: white 0 0 50px;
 	animation: boxglow 5s infinite;
+	background-image: url('pic/head1.jpg');
+	background-size: cover;
+	background-position: top center;
+	transition: transform 750ms, opacity 750ms;
+/*	opacity: 0;
+	transform: scale(0.7);*/
 }
 @keyframes boxglow{
 	from{box-shadow: rgba(255,255,255,.8) 0 0 50px 0px;}
 	50%{box-shadow: rgba(255,255,255,.8) 0 0 200px 50px;}
 	to{box-shadow: rgba(255,255,255,.8) 0 0 50px 0px;}
-}
-#headpic>img{
-	width:100%;
 }
 #name{
 	padding-top: 4vh;
@@ -39,7 +72,13 @@
 	font-family: serif;
 }
 
+
+/*NAVIGATION BAR*/
 #navbar{
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	height: calc(20vh + 50px);
 	flex:1 0 0;
 	padding: 0;
 }
@@ -47,7 +86,7 @@
 	width: 100%;
 }
 #navbar .button{
-	flex:0 1 130px;
+	flex:0 1 150px;
 	text-align: center;
 	font-family: serif;
 	font-size: 12pt;
