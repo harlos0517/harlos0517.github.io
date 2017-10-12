@@ -9,6 +9,8 @@
 	height:100%;
 	width:100%;
 	position: absolute;
+	opacity: 0;
+	transition: all 300ms;
 }
 #homebg{
 	background-image: url(pic/head4.jpg);
@@ -51,14 +53,17 @@
 	height:35vmin;
 	border-radius: 50%;
 	overflow: hidden;
-	box-shadow: white 0 0 50px;
-	animation: boxglow 5s infinite;
-	background-image: url('pic/head1.jpg');
+/*	box-shadow: white 0 0 100px 10px;*/
+/*	animation: boxglow 5s infinite;*/
+/*	background-image: url('pic/head1.jpg');
 	background-size: cover;
-	background-position: top center;
+	background-position: top center;*/
 	transition: transform 750ms, opacity 750ms;
 	opacity: 0;
 	transform: scale(0.7);
+}
+#headpic>img{
+	height: 100%;
 }
 @keyframes boxglow{
 	from{box-shadow: rgba(255,255,255,.8) 0 0 50px 0px;}
