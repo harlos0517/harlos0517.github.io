@@ -44,9 +44,39 @@
 }
 
 /*HOMEPAGE*/
-#profile{
-	flex: 0 0 calc(100% - 70px);
+#home>.wrapper{
+	height:calc(100% - 70px);
 	padding: 10px 0 0 0;
+}
+#profile{
+	flex: 6 0 0;
+}
+#log{
+	flex: 0 0 auto;
+	align-self: flex-end;
+	max-height: 100%;
+	color:rgba(192,192,192,.7);
+	text-align: left;
+	font-size: 8pt;
+	font-family: monospace;
+	padding: 20px 20px 50px 20px;
+	overflow-:auto;
+}
+#log table th{
+	padding: 5px 5px;
+}
+#log table td{
+	padding: 2px 5px;
+}
+#log table th:first-child,
+#log table td:first-child{
+	text-align: right;
+	min-width: 100px;
+}
+#log table th:last-child,
+#log table td:last-child{
+	text-align: left;
+	max-width: 150px;
 }
 #headpic{
 	width:35vmin;
