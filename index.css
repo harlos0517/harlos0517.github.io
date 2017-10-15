@@ -52,31 +52,32 @@
 	flex: 6 0 0;
 }
 #log{
-	flex: 0 0 auto;
-	align-self: flex-end;
+	flex: 0 0 0;
 	max-height: 100%;
-	color:rgba(192,192,192,.7);
+	color:rgba(255,255,255,.6);
 	text-align: left;
 	font-size: 8pt;
 	font-family: monospace;
-	padding: 20px 20px 50px 20px;
-	overflow-:auto;
+	margin: 20px 0 50px 0;
+	overflow:auto;
+	transition: all 500ms;
+	z-index: 10;
 }
 #log table th{
-	padding: 5px 5px;
+	padding: 8px 5px;
 }
 #log table td{
-	padding: 2px 5px;
+	padding: 4px 5px;
 }
 #log table th:first-child,
 #log table td:first-child{
 	text-align: right;
-	min-width: 100px;
+	min-width: 110px;
 }
 #log table th:last-child,
 #log table td:last-child{
 	text-align: left;
-	max-width: 150px;
+	min-width: 190px;
 }
 #headpic{
 	width:35vmin;
@@ -168,4 +169,21 @@
 	height: 100%;
 	width: 100%;
 	overflow: visible;
+}
+
+/*LOG INFORMATION*/
+#loginfo{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 10px;
+	font-family: monospace;
+	font-size: 8pt;
+	text-align: right;
+	color:rgba(192,192,192,.3);
+	max-width: 50vw;
+	transition: color 200ms;
+}
+#loginfo:hover{
+	color: rgba(255,255,255,.6);
 }
