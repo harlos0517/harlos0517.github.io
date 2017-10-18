@@ -11,17 +11,15 @@ function clicked(e,f){
 	e.addEventListener('click',f)
 }
 
-/*headpic loaded animation*/
+/*homepage loaded animation*/
 function showHeadpic(){
 	$('#headpic').style.opacity = 1
 	$('#headpic').style.transform = 'scale(1)'
 }
+$('#home').style.opacity = 1
 loaded($('#headpic>img'),showHeadpic)
-
-/*background loaded animation*/
-var bgs = $('#main-background>.bg')
 loaded(window,()=>{
-	bgs[0].style.opacity = 1
+	$('#main-background>.bg')[0].style.opacity = 1
 })
 
 /*loginfo click animtation*/
@@ -38,4 +36,39 @@ clicked($('#loginfo'),()=>{
 		log.style.margin = '20px 0 50px 0'
 		logInfoShown = false
 	}
+})
+
+/*changing pages*/
+var pages=['home','code','music','photo','timeline','diary']
+/*var pagebg=['pic/head4.jpg','pic/head7.jpg','pic/head2.jpg',
+	'pic/head8.jpg','pic/head3.jpg','pic/head6.jpg']
+var bgloaded=[true,false,false,false,false,false]*/
+var curpage = 0
+function flip(tarpage){
+	if(curpage != tarpage){
+		var dir = (tarpage - curpage > 0) ? 1 : -1
+		var curbg = $('#' + pages[curpage] + 'bg')
+		var tarbg = $('#' + pages[tarpage] + 'bg')
+		var curelement = $('#' + pages[curpage])
+		var tarelement = $('#' + pages[tarpage])
+		curbg.style.left = dir*-10 + 'vw'
+		curbg.style.opacity = 0
+		tarbg.style.opacity = 1
+		tarbg.style.left = 0
+		for(var j = curpage + dir; j != tarpage; j += dir){
+			$('#' + pages[j] + 'bg').style.left = dir*-10 + 'vw'
+		}
+		curelement.style.left = dir*-10 + 'vw'
+		curelement.style.opacity = 0
+		tarelement.style.opacity = 1
+		tarelement.style.left = 0
+		for(var j = curpage + dir; j != tarpage; j += dir){
+			$('#' + pages[j]).style.left = dir*-10 + 'vw'
+		}
+		curpage = tarpage
+	}
+}
+$('#navbar .button').forEach((e,i,a)=>{
+	console.log(e)
+	clicked(e,()=>{flip(i+1)})
 })
