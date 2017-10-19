@@ -19,7 +19,9 @@ function showHeadpic(){
 $('#home').style.opacity = 1
 loaded($('#headpic>img'),showHeadpic)
 loaded(window,()=>{
-	$('#main-background>.bg')[0].style.opacity = 1
+	$('#main-background').style.opacity = 1
+	$('#homebg').style.opacity = 1
+	$('body').style.cursor = 'default'
 })
 
 /*loginfo click animtation*/
@@ -66,7 +68,7 @@ function flip(tarpage){
 			$('#' + pages[j]).style.left = dir*-10 + 'vw'
 		}
 		if(tarpage){
-			$('#navbar .activebg')[tarpage-1].style.opacity = 1
+			$('#navbar .activebg')[tarpage-1].style.opacity = .7
 			$('#backhome').style.opacity = 1
 		}
 		else $('#backhome').style.opacity = 0
