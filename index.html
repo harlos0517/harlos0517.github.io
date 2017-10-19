@@ -11,73 +11,76 @@
 	<meta property="og:url" content="http://deemo.life"></meta>
 	<meta property="og:site_name" content="Deemo Harlos"></meta>
 </head>
-<body style="background-color: black; cursor: progress;">
+<body class="flex column" style="background-color: black; cursor: progress;">
 
-	<div id="main-background" class="fullscreen">
-		<div class="bg" id="homebg"></div>
-		<div class="bg" id="codebg"></div>
-		<div class="bg" id="musicbg"></div>
-		<div class="bg" id="photobg"></div>
-		<div class="bg" id="timelinebg"></div>
-		<div class="bg" id="diarybg"></div>
-		<div class="filter"></div>
+	<div id="top-screen">
+		<div id="home" class="page flex row">
+			<div class="bg"><img src="" class="loader">
+				<div class="filter"></div></div>
+			<div id="profile" class="flex column center">
+				<div id="headpic"><img src="pic/head1.jpg" draggable="false"></div>
+				<div id="name"><span>Deemo Harlos</span></div>
+			</div>
+			<div id="log">
+				<table align="right"><tbody>
+					<tr>
+						<th>DATE</th>
+						<th>DESCRIPTION</th>
+					</tr>
+					<tr>
+						<td>2017 / 10 / 16</td>
+						<td>Add log message with full log info animation</td>
+					</tr>
+					<tr>
+						<td>2017 / 10 / 13</td>
+						<td>First public version published</td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+
+		<div id="code" class="page flex column center">
+			<div class="bg"><img src="" class="loader">
+				<div class="filter"></div></div>
+			<h1>坑坑相連到天邊</h1><br>
+			<p>身為工程師，身邊必然有很多坑要填，<br>	每個都寄放著讓自己變強的期望。</p>
+			<p><b>此區<span class="red">尚未開放</span>！</b></p>
+		</div>
+
+		<div id="music" class="page flex column center">
+			<div class="bg"><img src="" class="loader">
+				<div class="filter"></div></div>
+			<h1>音樂，生命支柱</h1><br>
+			<p>最愛聽 Deemo 與管樂，<br>編曲橫跨鋼琴、管樂與室內樂，<br>努力將音樂的力量傳播出去。</p>
+			<p><b>此區<span class="red">尚未開放</span>！</b></p>
+		</div>
+
+		<div id="photo" class="page flex column center">
+			<div class="bg"><img src="" class="loader">
+				<div class="filter"></div></div>
+			<h1>一張又一張回憶</h1><br>
+			<p>曾拿著傻瓜相機四處亂拍，<br>曾記錄下最美的風景與人，<br>每一張都訴說著過去。</p>
+			<p><b>此區<span class="red">尚未開放</span>！</b></p>
+		</div>
+
+		<div id="timeline" class="page flex column center">
+			<div class="bg"><img src="" class="loader">
+				<div class="filter"></div></div>
+			<h1>時光一去不復返</h1><br>
+			<p>那是每一次屬於自己的榮耀，<br>成就了現在更強大的自己。</p>
+			<p><b>此區<span class="red">尚未開放</span>！</b></p>
+		</div>
+
+		<div id="diary" class="page flex column center">
+			<div class="bg"><img src="" class="loader">
+				<div class="filter"></div></div>
+			<h1>最真實的自己</h1><br>
+			<p>心路歷程最寫實的寫照，<br>獻給最關心我的你們。</p>
+			<p><b>此區<span class="green">即將開放</span>！</b></p>
+		</div>
 	</div>
 
-	<div id="home" class="fullscreen page"><div class="wrapper flex row">
-		<div id="profile" class="flex column center">
-			<div id="headpic"><img src="pic/head1.jpg" draggable="false"></div>
-			<div id="name"><span>Deemo Harlos</span></div>
-		</div>
-		<div id="log">
-			<table align="right"><tbody>
-				<tr>
-					<th>DATE</th>
-					<th>DESCRIPTION</th>
-				</tr>
-				<tr>
-					<td>2017 / 10 / 16</td>
-					<td>Add log message with full log info animation</td>
-				</tr>
-				<tr>
-					<td>2017 / 10 / 13</td>
-					<td>First public version published</td>
-				</tr>
-			</tbody></table>
-		</div>
-	</div></div>
-
-	<div id="code" class="fullscreen page"><div class="wrapper flex column center">
-		<h1>坑坑相連到天邊</h1><br>
-		<p>身為工程師，身邊必然有很多坑要填，<br>	每個都寄放著讓自己變強的期望。</p>
-		<p><b>此區尚未開放！</b></p>
-	</div></div>
-
-	<div id="music" class="fullscreen page"><div class="wrapper flex column center">
-		<h1>音樂，生命支柱</h1><br>
-		<p>最愛聽 Deemo 與管樂，<br>編曲橫跨鋼琴、管樂與室內樂，<br>努力將音樂的力量傳播出去。</p>
-		<p><b>此區尚未開放！</b></p>
-	</div></div>
-
-	<div id="photo" class="fullscreen page"><div class="wrapper flex column center">
-		<h1>一張又一張回憶</h1><br>
-		<p>曾拿著傻瓜相機四處亂拍，<br>曾記錄下最美的風景與人，<br>每一張都訴說著過去。</p>
-		<p><b>此區尚未開放！</b></p>
-	</div></div>
-
-	<div id="timeline" class="fullscreen page"><div class="wrapper flex column center">
-		<h1>時光一去不復返</h1><br>
-		<p>那是每一次屬於自己的榮耀，<br>成就了現在更強大的自己。</p>
-		<p><b>此區尚未開放！</b></p>
-	</div></div>
-
-	<div id="diary" class="fullscreen page"><div class="wrapper flex column center">
-		<h1>最真實的自己</h1><br>
-		<p>心路歷程最寫實的寫照，<br>獻給最關心我的你們。</p>
-		<p><b>此區尚未開放！</b></p>
-	</div></div>
-
-
-	<div id="navbar" class="flex column center">
+	<div id="navbar"><div class="wrapper flex column center">
 		<div class="buttons flex row center">
 			<div class="button">
 				<div class="text">Code</div>
@@ -106,14 +109,25 @@
 			</div>
 		</div>
 		<div id="line" class="flex row center"></div>
-	</div>
+	</div></div>
 
-	<div id="loginfo">
-		<span><strong>[ 2017 / 10 / 16 ]</strong><br>
-		Add log message with full log info animation</span>
+	<div id="infobar" class="flex row">
+
+		<div id="backhome"><span>HOME</span></div>
+
+		<div id="time">
+			<div id="date"></div>
+			<div>
+				<span id="min"></span>
+				<span id="sec"></span>
+			</div>
+		</div>
+
+		<div id="loginfo">
+			<span><strong>[ 2017 / 10 / 16 ]</strong><br>
+			Add log message with full log info animation</span>
+		</div>
 	</div>
-	
-	<div id="backhome">HOME</div>
 
 	<script src="index.js" type="text/javascript"></script>
 

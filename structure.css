@@ -7,6 +7,7 @@ body{
 	font-family: sans-serif;
 	user-select: none;
 	overflow: hidden;
+	height: 100vh;
 }
 .flex{
 	display:flex;

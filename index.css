@@ -1,69 +1,73 @@
-/*MAIN BACKGROUND*/
-#main-background{
-	transition: all 500ms;
-	opacity: 0;
-}
-#main-background>.filter{
-	position: absolute;
-	height:100%;
-	width:100%;
-	background-color: rgba(0,0,0,0.7);
-}
-#main-background>#homebg{
-	left:0;
-}
-#main-background>.bg{
-	height:100%;
-	width:100%;
-	position: absolute;
-	left:10vw;
-	opacity: 0;
-	transition: all 500ms;
-	background-size: cover;
-	transform: scale(1.1);
-}
-#homebg{
-	background-image: url('pic/head4.jpg');
-	background-position: right center;
-}
-#codebg{
-	background-image: url('pic/head7.jpg');
-	background-position: bottom center;
-}
-#musicbg{
-	background-image: url('pic/head2.jpg');
-	background-position: left center;
-}
-#photobg{
-	background-image: url('pic/head8.jpg');
-	background-position: center;
-}
-#timelinebg{
-	background-image: url('pic/head3.jpg');
-	background-position: left center;
-}
-#diarybg{
-	background-image: url('pic/head6.jpg');
-	background-position: center;
-}
+/*TEXT*/
+span.green{color:#33CC33;}
+span.red{color:#FF6666;}
 
-/*PAGES*/
-#home{
-	left:0;
+/*TOP-SCREEN*/
+#top-screen{
+	flex: 1 0 70vmin;
+	position: relative;
 }
 .page{
-	height:calc(100% - 70px);
-	padding: 10px;
+	position: absolute;
+	width: 100%;
+	height:100%;
 	opacity: 0;
 	transition: all 500ms;
 	left:10vw;
+	padding: 8px;
 }
 .page>.wrapper{
 	overflow-y: auto;
 	height: 100%;
 }
 
-/*HOMEPAGE*/
+	/*BACKGROUNDS*/
+.page>.bg{
+	position: absolute;
+	top:0;
+	height:100vh;
+	width:100vw;
+	background-size: cover;
+	transform: scale(1.1);
+	z-index: -10;
+	opacity: 0;
+	transition: all 500ms;
+}
+#home>.bg{
+/*	background-image: url('pic/head4.jpg');*/
+	background-position: right center;
+}
+#code>.bg{
+/*	background-image: url('pic/head7.jpg');*/
+	background-position: bottom center;
+}
+#music>.bg{
+/*	background-image: url('pic/head2.jpg');*/
+	background-position: left center;
+}
+#photo>.bg{
+/*	background-image: url('pic/head8.jpg');*/
+	background-position: center;
+}
+#timeline>.bg{
+/*	background-image: url('pic/head3.jpg');*/
+	background-position: left center;
+}
+#diary>.bg{
+/*	background-image: url('pic/head6.jpg');*/
+	background-position: center;
+}
+.page>.bg>.filter{
+	position: absolute;
+	height:100%;
+	width:100%;
+	background-color: rgba(0,0,0,0.7);
+}
+
+	/*HOME*/
+#home{
+	left:0;
+}
 #profile{
 	flex: 6 0 0;
 }
@@ -125,16 +129,45 @@
 }
 
 
+	/*CODE*/
+#code{
+	text-align: center;
+}
+
+	/*MUSIC*/
+#music{
+	text-align: center;
+}
+
+	/*PHOTO*/
+#photo{
+	text-align: center;
+}
+
+	/*TIMELINE*/
+#timeline{
+	text-align: center;
+}
+
+	/*DIARY*/
+#diary{
+	text-align: center;
+}
+
+
+
 /*NAVIGATION BAR*/
 #navbar{
+	flex:0 0 10vh;
+	position: relative;
+}
+#navbar>.wrapper{
 	position: absolute;
-	bottom:0;
+	bottom: calc(-100%);
 	width: 100%;
 	height: calc(20vh + 50px);
-	flex:1 0 0;
-	padding: 0;
 }
-#navbar>*{
+#navbar>.wrapper>*{
 	width: 100%;
 }
 #navbar .button{
@@ -174,7 +207,6 @@
 	to{filter: brightness(100%);}
 }
 
-
 #line{
 	height: 5px;
 	background-color: white;
@@ -190,30 +222,18 @@
 	overflow: visible;
 }
 
-/*LOG INFORMATION*/
-#loginfo{
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	margin: 10px;
-	font-family: monospace;
-	font-size: 8pt;
-	text-align: right;
-	color:rgba(192,192,192,.3);
-	max-width: 50vw;
-	transition: color 200ms;
-}
-#loginfo:hover{
-	color: rgba(255,255,255,.6);
-}
 
-/*HOMEBUTTON*/
+/*INFOBAR*/
+#infobar{
+	flex: 0 0 60px;
+	padding: 10px;
+	z-index: 10;
+	align-items: center;
+}
 #backhome{
+	flex: 1 0 0;
 	font-family: serif;
-	position: absolute;
-	padding: 20px;
-	left: 0;
-	bottom: 0;
+	padding: 0 15px;
 	opacity: 0;
 	transition: all 300ms;
 }
@@ -221,27 +241,20 @@
 	text-shadow: white 0 0 20px;
 }
 
-/*CODE*/
-#code{
+#time{
+	flex: 0 0 auto;
 	text-align: center;
 }
 
-/*MUSIC*/
-#music{
-	text-align: center;
+#loginfo{
+	flex: 1 0 0;
+	margin: 10px;
+	font-family: monospace;
+	font-size: 8pt;
+	text-align: right;
+	color:rgba(192,192,192,.3);
+	transition: color 200ms;
 }
-
-/*PHOTO*/
-#photo{
-	text-align: center;
-}
-
-/*TIMELINE*/
-#timeline{
-	text-align: center;
-}
-
-/*DIARY*/
-#diary{
-	text-align: center;
+#loginfo:hover{
+	color: rgba(255,255,255,.6);
 }

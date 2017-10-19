@@ -19,8 +19,6 @@ function showHeadpic(){
 $('#home').style.opacity = 1
 loaded($('#headpic>img'),showHeadpic)
 loaded(window,()=>{
-	$('#main-background').style.opacity = 1
-	$('#homebg').style.opacity = 1
 	$('body').style.cursor = 'default'
 })
 
@@ -40,33 +38,35 @@ clicked($('#loginfo'),()=>{
 	}
 })
 
+/*backgrounds load animation*/
+var pagebg=['pic/head4.jpg','pic/head7.jpg','pic/head2.jpg',
+	'pic/head8.jpg','pic/head3.jpg','pic/head6.jpg']
+$('.loader').forEach((e,i,a)=>{
+	e.src = pagebg[i]
+	loaded(e,()=>{
+		$('.bg')[i].style.backgroundImage = 'url(\'' + pagebg[i] + '\')'
+		$('.bg')[i].style.opacity = 1
+		e.remove()
+	})
+})
+
 /*changing pages*/
 var pages=['home','code','music','photo','timeline','diary']
-/*var pagebg=['pic/head4.jpg','pic/head7.jpg','pic/head2.jpg',
-	'pic/head8.jpg','pic/head3.jpg','pic/head6.jpg']
-var bgloaded=[true,false,false,false,false,false]*/
+
+/*var bgloaded=[true,false,false,false,false,false]*/
 var curpage = 0
 function flip(tarpage){
 	if(curpage != tarpage){
 		var dir = (tarpage - curpage > 0) ? 1 : -1
-		var curbg = $('#' + pages[curpage] + 'bg')
-		var tarbg = $('#' + pages[tarpage] + 'bg')
 		var curelement = $('#' + pages[curpage])
 		var tarelement = $('#' + pages[tarpage])
-		curbg.style.left = dir*-10 + 'vw'
-		curbg.style.opacity = 0
-		tarbg.style.opacity = 1
-		tarbg.style.left = 0
 		for(var j = curpage + dir; j != tarpage; j += dir){
-			$('#' + pages[j] + 'bg').style.left = dir*-10 + 'vw'
+			$('#' + pages[j]).style.left = dir*-10 + 'vw'
 		}
 		curelement.style.left = dir*-10 + 'vw'
 		curelement.style.opacity = 0
 		tarelement.style.opacity = 1
 		tarelement.style.left = 0
-		for(var j = curpage + dir; j != tarpage; j += dir){
-			$('#' + pages[j]).style.left = dir*-10 + 'vw'
-		}
 		if(tarpage){
 			$('#navbar .activebg')[tarpage-1].style.opacity = .7
 			$('#backhome').style.opacity = 1
@@ -77,9 +77,34 @@ function flip(tarpage){
 	}
 }
 $('#navbar .button').forEach((e,i,a)=>{
-	console.log(e)
 	clicked(e,()=>{flip(i+1)})
 })
 
 /*back-to-home button*/
 clicked($('#backhome'),()=>{flip(0)})
+
+/*current time*/
+function addZ(n){
+	return n<10? '0'+n:''+n
+}
+function addSp(n){
+	return n<10? ' '+n:''+n
+}
+function presenttime(){
+	var time = new Date()
+	y = time.getFullYear()
+	z = addSp(time.getMonth()+1)
+	w = addSp(time.getDate())
+	h = addZ(time.getHours())
+	m = addZ(time.getMinutes())
+	s = addZ(time.getSeconds())
+	date = y+" / "+ z + " / " + w
+	min = h + " : " + m + ' : '
+	sec = s
+	document.getElementById("date").innerHTML = date 
+	document.getElementById("min").innerHTML = min 
+	document.getElementById("sec").innerHTML = sec 
+	setTimeout("presenttime()",1000)
+}
+
+presenttime()
