@@ -65,6 +65,12 @@ function flip(tarpage){
 		for(var j = curpage + dir; j != tarpage; j += dir){
 			$('#' + pages[j]).style.left = dir*-10 + 'vw'
 		}
+		if(tarpage){
+			$('#navbar .activebg')[tarpage-1].style.opacity = 1
+			$('#backhome').style.opacity = 1
+		}
+		else $('#backhome').style.opacity = 0
+		if(curpage) $('#navbar .activebg')[curpage-1].style.opacity = 0
 		curpage = tarpage
 	}
 }
@@ -72,3 +78,6 @@ $('#navbar .button').forEach((e,i,a)=>{
 	console.log(e)
 	clicked(e,()=>{flip(i+1)})
 })
+
+/*back-to-home button*/
+clicked($('#backhome'),()=>{flip(0)})
