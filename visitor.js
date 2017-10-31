@@ -1,5 +1,5 @@
 var req = new XMLHttpRequest()
-var server = 'http://deemo.pw:11518/deemo'
+var server = 'http://deemo.pw:11518'
 req.open('POST',server)
 req.setRequestHeader('Content-Type','application/X-www-form-urlencoded')
 req.send('website=deemo.life&userAgent=' + window.navigator.userAgent)
