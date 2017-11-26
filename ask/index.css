@@ -90,6 +90,9 @@ form{
 #head>div>div{
 	flex:1 0 0;
 }
+#table-content>div{
+	align-items: stretch;
+}
 .time,.ansTime,#h-time,#h-ansTime{
 	text-align: center;
 	flex:0 0 120px;
