@@ -65,8 +65,10 @@ function flip(tarpage){
 		}
 		curelement.style.left = dir*-10 + 'vw'
 		curelement.style.opacity = 0
+		curelement.style.pointerEvents = 'none'
 		tarelement.style.opacity = 1
 		tarelement.style.left = 0
+		tarelement.style.pointerEvents = 'auto'
 		if(tarpage){
 			$('#navbar .activebg')[tarpage-1].style.opacity = .7
 			$('#backhome').style.opacity = 1
