@@ -70,6 +70,7 @@ span.red{color:#FF6666;}
 }
 #profile{
 	flex: 6 0 0;
+	position: relative;
 }
 #log{
 	flex: 0 0 0;
@@ -113,6 +114,26 @@ span.red{color:#FF6666;}
 	opacity: 0;
 	transform: scale(0.7);
 }
+#fb{
+	position: absolute;
+	opacity: 0;
+	width:35vmin;
+	height:35vmin;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: transform 750ms, opacity 750ms;
+	top:0;
+	animation: B 3s infinite;
+}
+#fb>a{
+	display:block;
+	height: 100%;
+	z-index:30;
+}
+#fb>a>img{
+	height: 100%;
+	transform: scale(1.05);
+}
 #headpic>img{
 	height: 100%;
 }
@@ -120,6 +141,11 @@ span.red{color:#FF6666;}
 	from{box-shadow: rgba(255,255,255,.8) 0 0 50px 0px;}
 	50%{box-shadow: rgba(255,255,255,.8) 0 0 200px 50px;}
 	to{box-shadow: rgba(255,255,255,.8) 0 0 50px 0px;}
+}
+@keyframes B{
+	from{opacity: 0}
+	50%{opacity: .5}
+	to{opacity: 0}
 }
 #name{
 	padding-top: 4vh;
