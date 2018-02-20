@@ -5,26 +5,28 @@
 	<title>Deemo Harlos</title>
 	<link href="structure.css" rel="stylesheet">
 	<link href="index.css" rel="stylesheet">
-	<script src="visitor.js" type="text/javascript"></script>
+	<script src="general.js" type="text/javascript"></script>
 	<meta property="og:image" content="pic/head4.jpg">
 	<meta property="og:type" content="website">
 	<meta property="og:description" content="Deemo Harlos' garden of life.">
 	<meta property="og:url" content="http://deemo.life">
 	<meta property="og:site_name" content="Deemo Harlos">
 </head>
-<body class="flex column" style="background-color: black; cursor: progress;">
+<body><div class="wrap flex column">
 
-	<div id="top-screen">
-		<div id="home" class="page flex row">
-			<div class="bg"><img src="" class="loader">
-				<div class="filter"></div></div>
+	<div id="topscreen">
+		<div id="home" class="page flex row show">
+			<div class="bg"><img src="" class="loader"><div class="filter"></div></div>
 			<div id="profile" class="flex column center">
-				<div id="headpic"><img src="pic/head1.jpg" draggable="false">
-					<div id="fb"><a href="https://www.facebook.com/deemo0517"><img src="pic/facebook.png" draggable="false"></a></div></div>
+				<div id="headpic"><img src="pic/head1.jpg" draggable="false"></div>
 				<div id="name"><span>Deemo Harlos</span></div>
 			</div>
 			<div id="log">
 				<table align="right"><tbody>
+					<tr>
+						<td>2018 / 02 / 20</td>
+						<td>Reconstruct css and html structure</td>
+					</tr>
 					<tr>
 						<th>DATE</th>
 						<th>DESCRIPTION</th>
@@ -90,56 +92,52 @@
 		</div>
 	</div>
 
-	<div id="navbar"><div class="wrapper flex column center">
-		<div class="buttons flex row center">
+	<div id="bottombar">
+		<div id="navbar" class="flex row center">
+			<div id="line"></div>
 			<div class="button">
-				<div class="text">Code</div>
+				<span>Code</span>
 				<div class="buttonbg"></div>
 				<div class="activebg"></div>
 			</div>
 			<div class="button">
-				<div class="text">Music</div>
+				<span>Music</span>
 				<div class="buttonbg"></div>
 				<div class="activebg"></div>
 			</div>
 			<div class="button">
-				<div class="text">Photo</div>
+				<span>Photo</span>
 				<div class="buttonbg"></div>
 				<div class="activebg"></div>
 			</div>
 			<div class="button">
-				<div class="text">Timeline</div>
+				<span>Timeline</span>
 				<div class="buttonbg"></div>
 				<div class="activebg"></div>
 			</div>
 			<div class="button">
-				<div class="text">Diary</div>
+				<span>Diary</span>
 				<div class="buttonbg"></div>
 				<div class="activebg"></div>
 			</div>
 		</div>
-		<div id="line" class="flex row center"></div>
-	</div></div>
-
-	<div id="infobar" class="flex row">
-
-		<div id="backhome"><span>HOME</span></div>
-
-		<div id="time">
-			<div id="date"></div>
-			<div>
-				<span id="min"></span>
-				<span id="sec"></span>
+		<div id="infobar" class="flex row">
+			<div id="time">
+				<div><span id="date"></span></div>
+				<div>
+					<span id="min"></span>
+					<span id="sec"></span>
+				</div>
 			</div>
-		</div>
-
-		<div id="loginfo">
-			<span><strong>[ 2017 / 11 / 01 ]</strong><br>
-			Add visitor counter</span>
+			<div id="backhome" class="button"><span>HOME</span></div>
+			<div id="loginfo" class="button">
+				<span><strong>[ 2018 / 02 / 20 ]</strong><br>
+				Reconstruct css and html structure</span>
+			</div>
 		</div>
 	</div>
 
 	<script src="index.js" type="text/javascript"></script>
 
-</body>
+</div></body>
 </html>

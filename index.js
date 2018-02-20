@@ -1,30 +1,13 @@
-/*General Function Declaration*/
-function $(a){
-	var e = document.querySelectorAll(a)
-	if (e.length == 1) return e[0]
-	else return e
-}
-function loaded(e,f){
-	e.addEventListener('load',f)
-}
-function clicked(e,f){
-	e.addEventListener('click',f)
-}
-
-/*homepage loaded animation*/
+/* homepage loaded animation */
 function showHeadpic(){
 	$('#headpic').style.opacity = 1
 	$('#headpic').style.transform = 'scale(1)'
 }
-$('#home').style.opacity = 1
-loaded($('#headpic>img'),showHeadpic)
-loaded(window,()=>{
-	$('body').style.cursor = 'default'
-})
+$('#headpic>img').$e('load',showHeadpic)
 
-/*loginfo click animtation*/
+/* loginfo click animtation */
 var logInfoShown = false
-clicked($('#loginfo'),()=>{
+$('#loginfo').$e('click',function(){
 	var log = $('#log')
 	if(!logInfoShown){
 		log.style.flex = '0 0 300px'
@@ -38,54 +21,46 @@ clicked($('#loginfo'),()=>{
 	}
 })
 
-/*backgrounds load animation*/
+/* backgrounds load animation */
 var pagebg=['pic/head4.jpg','pic/head7.jpg','pic/head2.jpg',
-	'pic/head8.jpg','pic/head3.jpg','pic/head6.jpg']
-$('.loader').forEach((e,i,a)=>{
+            'pic/head8.jpg','pic/head3.jpg','pic/head6.jpg']
+$a('.loader').forEach(function(e,i,a){
 	e.src = pagebg[i]
-	loaded(e,()=>{
-		$('.bg')[i].style.backgroundImage = 'url(\'' + pagebg[i] + '\')'
-		$('.bg')[i].style.opacity = 1
+	e.$e('load',function(){
+		$a('.bg')[i].style.backgroundImage = 'url(\'' + pagebg[i] + '\')'
+		$a('.bg')[i].style.opacity = 1
 		e.remove()
 	})
 })
 
-/*changing pages*/
+/* changing pages */
 var pages=['home','code','music','photo','timeline','diary']
 
-/*var bgloaded=[true,false,false,false,false,false]*/
+/* var bgloaded=[true,false,false,false,false,false] */
 var curpage = 0
 function flip(tarpage){
 	if(curpage != tarpage){
-		var dir = (tarpage - curpage > 0) ? 1 : -1
 		var curelement = $('#' + pages[curpage])
 		var tarelement = $('#' + pages[tarpage])
-		for(var j = curpage + dir; j != tarpage; j += dir){
-			$('#' + pages[j]).style.left = dir*-10 + 'vw'
-		}
-		curelement.style.left = dir*-10 + 'vw'
-		curelement.style.opacity = 0
-		curelement.style.pointerEvents = 'none'
-		tarelement.style.opacity = 1
-		tarelement.style.left = 0
-		tarelement.style.pointerEvents = 'auto'
+		curelement.$tc('show',false)
+		tarelement.$tc('show',true)
 		if(tarpage){
-			$('#navbar .activebg')[tarpage-1].style.opacity = .7
-			$('#backhome').style.opacity = 1
+			$a('#navbar .activebg')[tarpage-1].$tc('show',true)
+			$('#backhome').$tc('show',true)
 		}
-		else $('#backhome').style.opacity = 0
-		if(curpage) $('#navbar .activebg')[curpage-1].style.opacity = 0
+		else $('#backhome').$tc('show',false)
+		if(curpage) $a('#navbar .activebg')[curpage-1].$tc('show',false)
 		curpage = tarpage
 	}
 }
-$('#navbar .button').forEach((e,i,a)=>{
-	clicked(e,()=>{flip(i+1)})
+$a('#navbar .button').forEach(function(e,i,a){
+	e.$e('click',function(){flip(i+1)})
 })
 
-/*back-to-home button*/
-clicked($('#backhome'),()=>{flip(0)})
+/* back-to-home button */
+$('#backhome').$e('click',function(){flip(0)})
 
-/*current time*/
+/* current time */
 function addZ(n){
 	return n<10? '0'+n:''+n
 }
@@ -95,18 +70,18 @@ function addSp(n){
 function presenttime(){
 	var time = new Date()
 	y = time.getFullYear()
-	z = addSp(time.getMonth()+1)
-	w = addSp(time.getDate())
+	z = addZ(time.getMonth()+1)
+	w = addZ(time.getDate())
 	h = addZ(time.getHours())
 	m = addZ(time.getMinutes())
 	s = addZ(time.getSeconds())
-	date = y+" / "+ z + " / " + w
-	min = h + " : " + m + ' : '
+	date = y + ' / ' + z + ' / ' + w
+	min = h + ' : ' + m + ' : '
 	sec = s
-	document.getElementById("date").innerHTML = date 
-	document.getElementById("min").innerHTML = min 
-	document.getElementById("sec").innerHTML = sec 
-	setTimeout("presenttime()",1000)
+	document.getElementById('date').innerHTML = date 
+	document.getElementById('min').innerHTML = min 
+	document.getElementById('sec').innerHTML = sec 
+	setTimeout('presenttime()',1000)
 }
 
 presenttime()
