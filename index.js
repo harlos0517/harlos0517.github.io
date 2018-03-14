@@ -85,3 +85,4 @@ function presenttime(){
 }
 
 presenttime()
+updateDiary()
