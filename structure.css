@@ -23,6 +23,15 @@ body {
 /*	user-select: none;*/
 }
 
+*::-webkit-scrollbar {
+	width: 1vw;
+	position: absolute;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 10px;
+}
+
 #bodywrap{
 	width: 100%;
 	overflow-x: hidden;

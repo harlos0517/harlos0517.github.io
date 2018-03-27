@@ -33,13 +33,27 @@ body>.wrap{
 	height: 100%;
 	opacity: 0;
 	transition: all 200ms;
-	padding: 1vw;
+	padding: 1vw 2vw 3vw 2vw;
 	z-index: -50;
 }
 
-.page.show{
+.page.show {
 	opacity: 1;
 	z-index: 50;
+}
+
+.page .title{
+	font-size: 2em;
+	font-weight: bold;
+	margin: .3em 0;
+	text-align: center;
+}
+
+.page .footer {
+	color: #666666;
+	text-align: center;
+	font-size: .7em;
+	margin: 1em 0;
 }
 
 /* BACKGROUNDS */
@@ -122,13 +136,13 @@ body>.wrap{
 	padding: 4px 5px;
 }
 
-#log table th: first-child,
+#log table th:first-child,
 #log table td:first-child {
 	text-align: right;
 	min-width: 110px;
 }
 
-#log table th: last-child,
+#log table th:last-child,
 #log table td:last-child {
 	text-align: left;
 	min-width: 190px;
@@ -188,21 +202,75 @@ body>.wrap{
 }
 
 /* DIARY */
-#diary {
-	text-align: center;
+
+#diary>.list {
+	height: 100%;
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 10%;
+	flex-wrap: wrap;
+	opacity: 1;
+	transition: opacity 300ms;
+}
+
+#diary>.list.hide {
+	opacity: 0;
+}
+
+#diary>.list>.wrapper {
+	overflow-y: auto;
+	flex: 1 0 0;
+}
+
+#diary>.list>.wrapper>.item {
+	margin: 2vw;
+	padding: .5em 1em;
+	background-color: rgba(0,0,0,.7);
+	position: relative;
+}
+
+#diary>.list>.wrapper>.item>.diarytitle {
+	font-size: 1.5em;
+}
+
+#diary>.list>.wrapper>.item>.diarytime {
+	font-family: monospace;
+	color: #777;
+	position: absolute;
+	right: 1em;
+	top: 1em;
 }
 
 #diary>.content {
-	width: 100%;
-	height: 100%;
+	position: absolute;
+	width: calc(100% - 4vw);
+	height: calc(100% - 4vw);
+	transform: scale(.7);
 	overflow-y: auto;
-	flex-wrap: wrap;
+	opacity: 0;
+	z-index: -10;
+	transition: transform 300ms,
+	            opacity   300ms;
 }
 
-#diary>.content>.item {
-	width: 400px;
-	margin: 10px;
-	padding: 15px;
+#diary>.content.show {
+	transform: scale(1);
+	opacity: 1;
+	z-index: 10;
+}
+
+#diary>.content>.wrapper {
+	width: 100%;
+	padding: 0 2vw;
+}
+
+#diary>.content>.back {
+	position: absolute;
+	top: 1vw;
+	right: 2vw;
+	width: 40px;
+	height: 40px;
+	background-color: #999999;
 }
 
 /* BOTTOM BAR */

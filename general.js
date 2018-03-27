@@ -29,10 +29,10 @@ Element.prototype.attr = function(n,v){
 }
 
 Element.prototype.apnd = function(e){
-	if(!Element.prototype.append)
+	//if(!Element.prototype.append)
 		if(typeof(e) === 'object') this.insertAdjacentElement('beforeend', e)
 		else this.insertAdjacentHTML('beforeend', e)
-	else this.append(e)
+	//else this.append(e)
 	return this
 }
 
