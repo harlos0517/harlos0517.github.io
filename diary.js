@@ -13,7 +13,6 @@ function parseDate(d){
 
 function updateDiary(){
 	var req = new XMLHttpRequest()
-	var server = 'http://localhost:11517'
 	req.open('GET',server + '/diary')
 	req.setRequestHeader('Content-Type','application/X-www-form-urlencoded')
 	req.send()
@@ -40,7 +39,6 @@ function updateDiary(){
 
 function readDiary(id){
 	var req = new XMLHttpRequest()
-	var server = 'http://localhost:11517'
 	req.open('GET',server + '/diary/' + id)
 	req.setRequestHeader('Content-Type','application/X-www-form-urlencoded')
 	req.send()
