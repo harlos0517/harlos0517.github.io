@@ -1,1 +1,1 @@
-var server = 'http://140.112.30.33:11517'
+var server = 'http://linux2.csie.ntu.edu.tw:11517'
