@@ -24,12 +24,12 @@ body {
 }
 
 *::-webkit-scrollbar {
-	width: 1vw;
+	width: 8px;
 	position: absolute;
 }
 *::-webkit-scrollbar-thumb {
 	background-color: rgba(255,255,255,0.2);
-	border-radius: 10px;
+	border-radius: 4px;
 }
 
 #bodywrap{

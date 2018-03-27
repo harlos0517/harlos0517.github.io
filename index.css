@@ -223,7 +223,7 @@ body>.wrap{
 }
 
 #diary>.list>.wrapper>.item {
-	margin: 2vw;
+	margin: 1em;
 	padding: .5em 1em;
 	background-color: rgba(0,0,0,.7);
 	position: relative;
