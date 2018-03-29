@@ -48,6 +48,7 @@ function readDiary(id){
 			if(req.status>=200 && req.status<400){
 				data = JSON.parse(req.response).content
 				var converter = new showdown.Converter()
+				converter.setOption('simpleLineBreaks',true)
 				var html = converter.makeHtml(data)
 				$('#diary>.list').$tc('hide',true)
 				$('#diary>.content').apnd($n('div','','wrapper').apnd(html))
