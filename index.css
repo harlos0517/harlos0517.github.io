@@ -246,7 +246,6 @@ body>.wrap{
 	width: calc(100% - 4vw);
 	height: calc(100% - 4vw);
 	transform: scale(.7);
-	overflow-y: auto;
 	opacity: 0;
 	z-index: -10;
 	transition: transform 300ms,
@@ -261,7 +260,9 @@ body>.wrap{
 
 #diary>.content>.wrapper {
 	width: 100%;
+	height: 100%;
 	padding: 0 2vw;
+	overflow-y: auto;
 }
 
 #diary>.content>.back {
