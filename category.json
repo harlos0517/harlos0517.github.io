@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Music",
+    "bgimg": "pic/head4.jpg",
+    "link": "music.html"
+  },{
+    "name": "Programming",
+    "bgimg": "pic/head4.jpg",
+    "link": "programming.html"
+  },{
+    "name": "Photo",
+    "bgimg": "pic/head4.jpg",
+    "link": "photo.html"
+  },{
+    "name": "Autobio",
+    "bgimg": "pic/head4.jpg",
+    "link": "autobio.html"
+  }
+]

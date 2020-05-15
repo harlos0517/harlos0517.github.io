@@ -3,159 +3,43 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Deemo Harlos</title>
-	<link href="structure.css" rel="stylesheet">
 	<link href="index.css" rel="stylesheet">
-	<script src="general.js" type="text/javascript"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js" type="text/javascript"></script>
+	<!--OG-->
 	<meta property="og:image" content="pic/head4.jpg">
 	<meta property="og:type" content="website">
 	<meta property="og:description" content="Deemo Harlos' garden of life.">
-	<meta property="og:url" content="http://deemo.life">
+	<meta property="og:url" content="https://deemoharlos.space">
 	<meta property="og:site_name" content="Deemo Harlos">
+	<!--BOOTSTRAP-->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<!--VUE-->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116631189-1"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-116631189-1');
+		window.dataLayer = window.dataLayer || []
+		function gtag(){ dataLayer.push(arguments) }
+		gtag('js', new Date())
+		gtag('config', 'UA-116631189-1')
 	</script>
 </head>
-<body><div class="wrap flex column">
-
-	<div id="topscreen">
-		<div id="home" class="page flex row show">
-			<div class="bg"><img src="" class="loader"><div class="filter"></div></div>
-			<div id="profile" class="flex column center">
-				<div id="headpic"><img src="pic/head1.jpg" draggable="false"></div>
-				<div id="name"><span>Deemo Harlos</span></div>
-			</div>
-			<div id="log">
-				<table align="right"><tbody>
-					<tr>
-						<td>2018 / 02 / 20</td>
-						<td>Reconstruct css and html structure</td>
-					</tr>
-					<tr>
-						<th>DATE</th>
-						<th>DESCRIPTION</th>
-					</tr>
-					<tr>
-						<td>2017 / 11 / 01</td>
-						<td>Add visitor counter</td>
-					</tr>
-					<tr>
-						<td>2017 / 10 / 19</td>
-						<td>Rebuild structure, add page flipping animation</td>
-					</tr>
-					<tr>
-						<td>2017 / 10 / 16</td>
-						<td>Add log message with full log info animation</td>
-					</tr>
-					<tr>
-						<td>2017 / 10 / 13</td>
-						<td>First public version published</td>
-					</tr>
-				</tbody></table>
-			</div>
+<body class="text-white">
+	<div id="main" class="w-100 vh-100 d-flex flex-column">
+		<div id="content" class="w-100 flex-fill d-flex flex-column justify-content-center align-items-center">
+			<div id="headpic" class="rounded-circle mb-4"></div>
+			<div id="name"><h1>Deemo Harlos</h1></div>
 		</div>
-
-		<div id="code" class="page flex column center">
-			<div class="bg"><img src="" class="loader">
-				<div class="filter"></div></div>
-			<h1>坑坑相連到天邊</h1><br>
-			<p>身為工程師，身邊必然有很多坑要填，<br>	每個都寄放著讓自己變強的期望。</p>
-			<p><b>此區<span class="red">尚未開放</span>！</b></p>
+		<div id="categories" class="d-flex flex-row justify-content-center">
+			<div v-for="category in categories" class="p-4 d-inline-block"><h3>{{ category.name }}</h3></div>	
 		</div>
-
-		<div id="music" class="page flex column center">
-			<div class="bg"><img src="" class="loader">
-				<div class="filter"></div></div>
-			<h1>音樂，生命支柱</h1><br>
-			<p>最愛聽 Deemo 與管樂，<br>編曲橫跨鋼琴、管樂與室內樂，<br>努力將音樂的力量傳播出去。</p>
-			<p><b>此區<span class="red">尚未開放</span>！</b></p>
-		</div>
-
-		<div id="photo" class="page flex column center">
-			<div class="bg"><img src="" class="loader">
-				<div class="filter"></div></div>
-			<h1>一張又一張回憶</h1><br>
-			<p>曾拿著傻瓜相機四處亂拍，<br>曾記錄下最美的風景與人，<br>每一張都訴說著過去。</p>
-			<p><b>此區<span class="red">尚未開放</span>！</b></p>
-		</div>
-
-		<div id="timeline" class="page flex column center">
-			<div class="bg"><img src="" class="loader">
-				<div class="filter"></div></div>
-			<h1>時光一去不復返</h1><br>
-			<p>那是每一次屬於自己的榮耀，<br>成就了現在更強大的自己。</p>
-			<p><b>此區<span class="red">尚未開放</span>！</b></p>
-		</div>
-
-		<div id="diary" class="page flex column center">
-			<div class="bg"><img src="" class="loader">
-				<div class="filter"></div></div>
-			<!--p><b>此區<span class="green">即將開放</span>！</b></p-->
-			<div class="list flex column">
-				<div class="title"><span>日記</span></div>
-				<div class="wrapper"></div>
-				<div class="footer">最真實的自己 -- <span>心路歷程最寫實的寫照，獻給最關心我的你們。</span></div>
-			</div>
-			<div class="content">
-				<div class="back">BACK</div>
+		<div id="info" class="d-flex flex-row justify-content-center p-3">
+			<div id="time" class="text-monospace text-center text-white-50">
+				<span class="h6">{{ date }}</span><br><span class="h3">{{ time }}</span>
 			</div>
 		</div>
 	</div>
-
-	<div id="bottombar">
-		<div id="navbar" class="flex row center">
-			<div id="line"></div>
-			<div class="button">
-				<span>Code</span>
-				<div class="buttonbg"></div>
-				<div class="activebg"></div>
-			</div>
-			<div class="button">
-				<span>Music</span>
-				<div class="buttonbg"></div>
-				<div class="activebg"></div>
-			</div>
-			<div class="button">
-				<span>Photo</span>
-				<div class="buttonbg"></div>
-				<div class="activebg"></div>
-			</div>
-			<div class="button">
-				<span>Timeline</span>
-				<div class="buttonbg"></div>
-				<div class="activebg"></div>
-			</div>
-			<div class="button">
-				<span>Diary</span>
-				<div class="buttonbg"></div>
-				<div class="activebg"></div>
-			</div>
-		</div>
-		<div id="infobar" class="flex row">
-			<div id="time">
-				<div><span id="date"></span></div>
-				<div>
-					<span id="min"></span>
-					<span id="sec"></span>
-				</div>
-			</div>
-			<div id="backhome" class="button"><span>HOME</span></div>
-			<div id="loginfo" class="button">
-				<span><strong>[ 2018 / 02 / 20 ]</strong><br>
-				Reconstruct css and html structure</span>
-			</div>
-		</div>
-	</div>
-
-	<script src="server.js" type="text/javascript"></script>
-	<script src="diary.js" type="text/javascript"></script>
 	<script src="index.js" type="text/javascript"></script>
-
-</div></body>
+</body>
 </html>
