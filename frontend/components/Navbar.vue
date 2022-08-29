@@ -1,10 +1,10 @@
 <template lang="pug">
   #navbar.flex-row.position-relative.my-4
-    .navbar-logo-bg.px-lg-4.px-2
+    .navbar-logo-bg.px-md-4.px-2
     NuxtLink(to="/").navbar-button.flex-row
       img.d-md-block.d-none.full(src="~/assets/image/navbar-logo.png")
       img.d-md-none.d-block.full(src="~/assets/image/navbar-logo-mobile.png")
-    .navbar-logo-bg.px-lg-4.px-2
+    .navbar-logo-bg.px-md-4.px-2
     img.full(src="~/assets/image/navbar-logo-div.png")
     .navbar-right.flex-column.flex-fill
       #buttons.flex-row.position-relative.pr-4
