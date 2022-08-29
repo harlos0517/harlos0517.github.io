@@ -1,0 +1,102 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	color: white;
+	font-family: sans-serif;
+	user-select: none;
+	overflow: hidden;
+	height: 100vh;
+}
+.flex{
+	display:flex;
+}
+.column{
+	flex-direction:column;
+}
+.row{
+	flex-direction:row;
+}
+.fullscreen{
+	position: absolute;
+	top:0;
+	left:0;
+	height:100vh;
+	width:100vw;
+}
+.center{
+	align-items: center;
+	justify-content: center;
+}
+.tcenter{
+	text-align: center;
+}
+
+textarea{
+	resize:none;
+	font-family: sans-serif;
+}
+input,button,textarea{
+	background-color: rgba(0,0,0,.5);
+	color: white;
+	transition: background-color 200ms,
+		color 200ms;
+	user-select: initial;
+	border: #CCCCCC 1px solid;
+	border-radius: 5px;
+	font-size: inherit;
+}
+
+input:focus,textarea:focus,button:focus{
+	background-color: rgba(0,0,0,.7);
+}
+
+input[type=submit]:hover,button:hover{
+	background-color: #333333;
+}
+
+input[type=submit]:active,button:active{
+	background-color: #000000;
+	color: #666666;
+}
+
+form{
+	margin: 10px 0;
+	font-size: 16pt;
+}
+
+form>*{
+	margin: 15px 0;
+}
+
+*::-webkit-scrollbar {
+	width:8px;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 100px;
+}
+
+@media(max-width: 640px){
+form{
+	margin: 10px 0;
+	font-size: 10pt;
+}
+body,.fullscreen{
+	height: 100vh;
+	min-height: 120vw;
+	overflow: auto;
+}
+}
+
+@media(max-width: 360px){
+form{
+	font-size: 8pt;
+}
+body,.fullscreen{
+	height: 100vh;
+	min-height: 150vw;
+	overflow: auto;
+}
+}
