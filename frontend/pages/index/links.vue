@@ -51,8 +51,7 @@ const mainLinks = [
     linkUrl: 'https://discord.gg/6r4bvhr',
   },
   {
-    imageUrl:
-      'http://s.musescore.org/about/images/musescore-mu-transbg-m.png',
+    imageUrl: require('~/assets/image/musescore.png'),
     text: 'musicsheets',
     linkUrl: 'https://musescore.com/deemoharlos',
   },
