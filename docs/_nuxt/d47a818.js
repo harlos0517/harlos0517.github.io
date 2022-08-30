@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{398:function(t,n,e){"use strict";e.r(n);var c=e(119),r=Object(c.b)({setup:function(){return{}}}),o=e(75),component=Object(o.a)(r,(function(){var t=this,n=t._self._c;t._self._setupProxy;return n("div",{staticClass:"text-center"},[t._v("Under construction...")])}),[],!1,null,"a952d142",null);n.default=component.exports}}]);
