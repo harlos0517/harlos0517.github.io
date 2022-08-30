@@ -2,21 +2,21 @@
   #links.text-center
     #main-links.link-class.my-4.flex-row.middle-center
       div.link.m-2(v-for="(link, key) in mainLinks" :key="key")
-        a.d-block.external-link.text-center(:href="link.linkUrl")
+        a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
           img(:src="link.imageUrl")
           br
           div.mt-2: span {{ link.text }}
     h3.mt-5 Dontaion
     #donate-links.link-class.my-4.flex-row.middle-center
       div.link.m-2(v-for="(link, key) in donateLinks" :key="key")
-        a.d-block.external-link.text-center(:href="link.linkUrl")
+        a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
           img(:src="link.imageUrl")
           br
           div.mt-2: span {{ link.text }}
     h3.mt-5 Social Media
     #other-links.link-class.my-4.flex-row.middle-center
       div.link.m-2(v-for="(link, key) in otherLinks" :key="key")
-        a.d-block.external-link.text-center(:href="link.linkUrl")
+        a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
           img(:src="link.imageUrl")
           br
           div.mt-2: span {{ link.text }}
