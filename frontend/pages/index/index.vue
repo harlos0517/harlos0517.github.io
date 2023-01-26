@@ -18,6 +18,8 @@
         span Original Music
       .item.item4.col-md-3.col-6.middle-center
         span Web Develop
+    #footer-container
+      Footer
 </template>
 
 <script lang="ts">
@@ -41,11 +43,11 @@ export default defineComponent({
       #headpic
         border-radius: 50%
         height: 200px
-        filter: drop-shadow(0 0 8px #000000CC)
+        filter: drop-shadow(0 0 4px #000000FF)
         @media screen and (max-width: 768px)
           height: 150px
       #description
-        filter: drop-shadow(0 0 8px #000000CC)
+        filter: drop-shadow(0 0 4px #000000FF)
         .name
           font-size: 3rem
           @media screen and (max-width: 768px)
@@ -59,7 +61,7 @@ export default defineComponent({
       transform: scale(1)
       transition: box-shadow 300ms, transform 300ms
       span
-        filter: drop-shadow(0 0 8px #000000CC)
+        filter: drop-shadow(0 0 4px #000000FF)
       &:hover
         box-shadow: 0 0 16px #000000CC
         z-index: 1
