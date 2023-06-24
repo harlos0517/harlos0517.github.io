@@ -1,25 +1,25 @@
 <template lang="pug">
-  #links.text-center
-    #main-links.link-class.my-4.flex-row.middle-center
-      div.link.m-2(v-for="(link, key) in mainLinks" :key="key")
-        a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
-          img(:src="link.imageUrl")
-          br
-          div.mt-2: span {{ link.text }}
-    h3.mt-5 Dontaion
-    #donate-links.link-class.my-4.flex-row.middle-center
-      div.link.m-2(v-for="(link, key) in donateLinks" :key="key")
-        a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
-          img(:src="link.imageUrl")
-          br
-          div.mt-2: span {{ link.text }}
-    h3.mt-5 Social Media
-    #other-links.link-class.my-4.flex-row.middle-center
-      div.link.m-2(v-for="(link, key) in otherLinks" :key="key")
-        a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
-          img(:src="link.imageUrl")
-          br
-          div.mt-2: span {{ link.text }}
+#links.text-center
+  #main-links.link-class.my-4.flex-row.middle-center
+    div.link.m-2(v-for="(link, key) in mainLinks" :key="key")
+      a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
+        img(:src="link.imageUrl")
+        br
+        div.mt-2: span {{ link.text }}
+  h3.mt-5 Dontaion
+  #donate-links.link-class.my-4.flex-row.middle-center
+    div.link.m-2(v-for="(link, key) in donateLinks" :key="key")
+      a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
+        img(:src="link.imageUrl")
+        br
+        div.mt-2: span {{ link.text }}
+  h3.mt-5 Social Media
+  #other-links.link-class.my-4.flex-row.middle-center
+    div.link.m-2(v-for="(link, key) in otherLinks" :key="key")
+      a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
+        img(:src="link.imageUrl")
+        br
+        div.mt-2: span {{ link.text }}
 </template>
 
 <script lang="ts">
@@ -27,41 +27,38 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 const mainLinks = [
   {
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/2699/PNG/512/youtube_logo_icon_168737.png',
+    imageUrl: require('~/assets/image/youtube.png'),
     text: 'Youtube',
     linkUrl: 'https://www.youtube.com/c/harlosmusic',
   },
   {
-    imageUrl:
-      'https://img.favpng.com/18/1/17/twitch-computer-icons-logo-png-favpng-Gpj6D8W7NPubLhPvTbefsX9ym.jpg',
+    imageUrl: require('~/assets/image/twitch.png'),
     text: 'Twitch',
-    linkUrl: 'https://www.twitch.tv/deemoharlos',
+    linkUrl: 'https://www.twitch.tv/harlosmusic',
   },
   {
-    imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/512px-Twitter-logo.svg.png',
+    imageUrl: require('~/assets/image/twitter.png'),
     text: 'Twitter',
-    linkUrl: 'https://twitter.com/DeemoHarlos',
+    linkUrl: 'https://twitter.com/Harlos_Music',
   },
   {
-    imageUrl:
-      'https://static.wikia.nocookie.net/kong/images/e/e9/Discord-icon.png',
+    imageUrl: require('~/assets/image/discord.webp'),
     text: 'Discord Server',
     linkUrl: 'https://discord.gg/6r4bvhr',
   },
   {
     imageUrl: require('~/assets/image/musescore.png'),
     text: 'musicsheets',
-    linkUrl: 'https://musescore.com/deemoharlos',
+    linkUrl: 'https://musescore.com/user/290451/',
   },
 ]
+
 const donateLinks = [
   {
     imageUrl:
       'https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/61e1116779fc0a9bd5bdbcc7_Frame%206.png',
     text: 'Ko-fi',
-    linkUrl: 'https://ko-fi.com/deemoharlos',
+    linkUrl: 'https://ko-fi.com/harlosmusic',
   },
   {
     imageUrl:
@@ -82,18 +79,19 @@ const donateLinks = [
     linkUrl: 'https://p.ecpay.com.tw/D09AB0F',
   },
 ]
+
 const otherLinks = [
   {
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1024px-2021_Facebook_icon.svg.png',
     text: 'Deemo Harlos',
-    linkUrl: 'https://www.facebook.com/deemoharlos/',
+    linkUrl: 'https://www.facebook.com/harlos0517',
   },
   {
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png',
     text: 'Deemo Harlos',
-    linkUrl: 'https://www.instagram.com/deemo_0517/',
+    linkUrl: 'https://www.instagram.com/harlos0517/',
   },
 ]
 

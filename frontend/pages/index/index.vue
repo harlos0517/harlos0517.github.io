@@ -1,25 +1,23 @@
 <template lang="pug">
-  #index-content.h-100.flex-column
-    #banner.position-relative
-      .container.flex-md-row.flex-column.middle-center.my-md-5.my-3
-        img#headpic.mr-md-5.mr-0(src="~/assets/image/headpic.jpg")
-        #description
-          .name Deemo Harlos
-          p.mb-0.text-md-left.text-center.
-            Pop Pianist, Percussionist, <br>
-            Arranger, Composer, <br>
-            Web Developer
-    #items.flex-fill.flex-row.text-center.flex-wrap
-      .item.item1.col-md-3.col-6.middle-center
-        span Piano
-      .item.item2.col-md-3.col-6.middle-center
-        span Covers &amp; Arrangements
-      .item.item3.col-md-3.col-6.middle-center
-        span Original Music
-      .item.item4.col-md-3.col-6.middle-center
-        span Web Develop
-    #footer-container
-      Footer
+#index-content.h-100.flex-column
+  #banner.position-relative
+    .container.flex-md-row.flex-column.middle-center.my-md-5.my-3
+      img#headpic.mr-md-5.mr-0(src="~/assets/image/headpic2.png")
+      #description
+        .name.text-md-left.text-center Harlos
+        p.mb-0.text-md-left.text-center.
+          Pop Pianist, Percussionist, <br>
+          Arranger, Composer, <br>
+          Web Developer
+  #items.flex-fill.flex-row.text-center.flex-wrap
+    .item.item1.col-md-3.col-6.middle-center
+      span Piano
+    .item.item2.col-md-3.col-6.middle-center
+      span Covers &amp; Arrangements
+    .item.item3.col-md-3.col-6.middle-center
+      span Original Music
+    .item.item4.col-md-3.col-6.middle-center
+      span Web Develop
 </template>
 
 <script lang="ts">

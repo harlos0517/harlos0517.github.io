@@ -1,9 +1,9 @@
 <template lang="pug">
-  #index.flex-column.fill-screen
-    #navbar-container
-      Navbar
-    #content-container.flex-fill
-      NuxtChild
+#index.flex-column.fill-screen
+  #navbar-container
+    Navbar
+  #content-container.flex-fill
+    NuxtChild
 </template>
 
 <script lang="ts">

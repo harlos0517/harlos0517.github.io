@@ -9,7 +9,7 @@
     "lintfix": "yarn lint:js --fix"
   },
   "dependencies": {
-    "@nuxtjs/composition-api": "^0.31.0",
+    "@nuxtjs/composition-api": "^0.33.1",
     "bootstrap": "^4.6.1",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.19.3",
