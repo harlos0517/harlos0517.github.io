@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.text-center Under construction...
+div.text-center Under construction...
 </template>
 
 <script lang="ts">
