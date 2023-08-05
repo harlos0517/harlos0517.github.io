@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Deemo Harlos',
+    title: 'Harlos Music',
     htmlAttrs: {
       lang: 'en',
     },
@@ -12,7 +12,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'og-type', property: 'og:type', content: 'website' },
-      { hid: 'og-title', property: 'og:title', content: 'Deemo Harlos' },
+      { hid: 'og-title', property: 'og:title', content: 'Harlos Music' },
       { hid: 'og-desc', property: 'og:description', content: 'Pop Pianist, Percussionist, Arranger, Composer, Web Developer' },
       { hid: 'og-image', property: 'og:image', content: '/og.png' },
       { hid: 'og-url', property: 'og:url', content: 'https://harlos.me' },

@@ -84,13 +84,13 @@ const otherLinks = [
   {
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1024px-2021_Facebook_icon.svg.png',
-    text: 'Deemo Harlos',
+    text: 'Harlos',
     linkUrl: 'https://www.facebook.com/harlos0517',
   },
   {
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png',
-    text: 'Deemo Harlos',
+    text: 'Harlos',
     linkUrl: 'https://www.instagram.com/harlos0517/',
   },
 ]

@@ -38,7 +38,7 @@ const works = [
   { type: 'original', name: 'Origin of the Winds 風の起源 (Wind Band)', youtube: 'https://youtu.be/keNRuTFXM6M', musescore: 'https://musescore.com/user/290451/scores/10383688' },
   { type: 'original', name: '雪蒂絲貓 Snowcat', youtube: 'https://youtu.be/BslFuth59ZQ' },
   { type: 'original', name: '海の旋律 (The Melody of Sea)', youtube: 'https://youtu.be/a0SUS6HOh9Y', musescore: 'https://musescore.com/user/290451/scores/6264353' },
-  { type: 'original', name: '淡聲 - 王馨瑜/Deemo Harlos/陳昱廷 (mutual work) ', youtube: 'https://youtu.be/ghsKRMIduRs' },
+  { type: 'original', name: '淡聲 - 王馨瑜/Harlos/陳昱廷 (mutual work) ', youtube: 'https://youtu.be/ghsKRMIduRs' },
   { type: 'original', name: 'Origin of the Winds (Chamber)', musescore: 'https://musescore.com/user/290451/scores/6579664' },
   { type: 'original', name: 'Fiery Phoenix Queen (The Day of The Phoenix) - KFP (mutual work)', youtube: 'https://youtu.be/n0bWcxMAiY4', musescore: 'https://musescore.com/user/290451/scores/6863066' },
 
@@ -140,7 +140,7 @@ const works = [
   // { type: 'other', musescore: 'https://musescore.com/user/290451/scores/7099755', name: 'Grace Kelly - MIKA (chorus A Capella Choir Arr. by Enna Alouette)' },
   // { type: 'other', musescore: 'https://musescore.com/user/290451/scores/6767070', name: 'Hot Cross Buns (Recorder Solo Cover by Mori Calliope)' },
   // { type: 'other', musescore: 'https://musescore.com/user/290451/scores/5422822', name: 'Sdorica Main Theme (Piano Ver.) - Chamber Chu' },
-  // { type: 'other', musescore: 'https://musescore.com/user/290451/scores/1720561', name: '[imcomplete] The Bells of Notre Dame (Windband Arr. Deemo Harlos)' },
+  // { type: 'other', musescore: 'https://musescore.com/user/290451/scores/1720561', name: '[imcomplete] The Bells of Notre Dame (Windband Arr. Harlos)' },
 ]
 
 export default defineComponent({
