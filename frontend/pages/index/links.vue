@@ -6,14 +6,14 @@
         img(:src="link.imageUrl")
         br
         div.mt-2: span {{ link.text }}
-  h3.mt-5 Dontaion
+  h3.mt-5 {{ $t('links.donation') }}
   #donate-links.link-class.my-4.flex-row.middle-center
     div.link.m-2(v-for="(link, key) in donateLinks" :key="key")
       a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
         img(:src="link.imageUrl")
         br
         div.mt-2: span {{ link.text }}
-  h3.mt-5 Social Media
+  h3.mt-5 {{ $t('links.socialMedia') }}
   #other-links.link-class.my-4.flex-row.middle-center
     div.link.m-2(v-for="(link, key) in otherLinks" :key="key")
       a.d-block.external-link.text-center(:href="link.linkUrl" target="_blank")
@@ -43,12 +43,12 @@ const mainLinks = [
   },
   {
     imageUrl: require('~/assets/image/discord.webp'),
-    text: 'Discord Server',
+    text: 'Discord',
     linkUrl: 'https://discord.gg/6r4bvhr',
   },
   {
     imageUrl: require('~/assets/image/musescore.png'),
-    text: 'musicsheets',
+    text: 'Musescore',
     linkUrl: 'https://musescore.com/user/290451/',
   },
 ]
@@ -84,13 +84,13 @@ const otherLinks = [
   {
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1024px-2021_Facebook_icon.svg.png',
-    text: 'Deemo Harlos',
+    text: 'Harlos',
     linkUrl: 'https://www.facebook.com/harlos0517',
   },
   {
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png',
-    text: 'Deemo Harlos',
+    text: 'Harlos',
     linkUrl: 'https://www.instagram.com/harlos0517/',
   },
 ]

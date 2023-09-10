@@ -13,6 +13,9 @@ export default defineComponent({
   setup() {
     return {}
   },
+  head() {
+    return this.$nuxtI18nHead({ addSeoAttributes: true })
+  },
 })
 </script>
 

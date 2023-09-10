@@ -35,14 +35,14 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref, useRouter } from '@nuxtjs/composition-api'
+import { computed, defineComponent, ref, useContext, useRouter } from '@nuxtjs/composition-api'
 import dateformat from 'dateformat'
 
 const links = [
-  { name: 'Collection', to: '/music', img: 'navbar-eighth' },
-  { name: 'Commission', to: '/commission', img: 'navbar-fclef' },
-  { name: 'Coding Projects', to: '/projects', img: 'navbar-commontime' },
-  { name: 'Links & Donation', to: '/links', img: 'navbar-gclef' },
+  { t: 'collection', to: '/music', img: 'navbar-eighth' },
+  { t: 'commission', to: '/commission', img: 'navbar-fclef' },
+  { t: 'projects', to: '/projects', img: 'navbar-commontime' },
+  { t: 'linksAndDonation', to: '/links', img: 'navbar-gclef' },
 ]
 
 const externalLinks = [
@@ -69,15 +69,16 @@ const externalLinks = [
 ]
 
 export default defineComponent({
-  setup() {
+  setup(_props) {
     const router = useRouter()
+    const { i18n } = useContext()
 
     let now = ref(new Date(Date.now() + 8 * 60 * 60 * 1000))
     const timeString = computed(
-      () => dateformat(now.value, 'UTC:yyyy mmm dd (ddd), HH:MM:ss "UTC+8"').toUpperCase(),
+      () => dateformat(now.value, i18n.t('navbar.timeFormat').toString()).toUpperCase(),
     )
     const timeStringMobile = computed(
-      () => dateformat(now.value, 'UTC:mmm dd, HH:MM "+8"').toUpperCase(),
+      () => dateformat(now.value, i18n.t('navbar.timeStringMobile').toString()).toUpperCase(),
     )
     setInterval(() => {
       now.value = new Date(Date.now() + 8 * 60 * 60 * 1000)
@@ -90,7 +91,9 @@ export default defineComponent({
       router.push({ path: showLink.value?.to || '/' })
     }
 
-    return { links, timeString, timeStringMobile, showLink, toggleLink, externalLinks }
+    const translatedLinks = links.map(l => ({ name: i18n.t(`navbar.${l.t}`), ...l }))
+
+    return { links: translatedLinks, timeString, timeStringMobile, showLink, toggleLink, externalLinks }
   },
 })
 </script>
