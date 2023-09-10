@@ -1,5 +1,5 @@
 <template lang="pug">
-div.text-center Under construction...
+div.text-center {{ $t('todo') }}
 </template>
 
 <script lang="ts">

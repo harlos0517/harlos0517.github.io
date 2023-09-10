@@ -4,20 +4,17 @@
     .container.flex-md-row.flex-column.middle-center.my-md-5.my-3
       img#headpic.mr-md-5.mr-0(src="~/assets/image/headpic2.png")
       #description
-        .name.text-md-left.text-center Harlos
-        p.mb-0.text-md-left.text-center.
-          Pop Pianist, Percussionist, <br>
-          Arranger, Composer, <br>
-          Web Developer
+        .name.text-md-left.text-center {{ $t('index.name') }}
+        p.mb-0.text-md-left.text-center(v-html="$t('index.description')")
   #items.flex-fill.flex-row.text-center.flex-wrap
     .item.item1.col-md-3.col-6.middle-center
-      span Piano
+      span {{ $t('index.piano') }}
     .item.item2.col-md-3.col-6.middle-center
-      span Covers &amp; Arrangements
+      span {{ $t('index.coverAndArr') }}
     .item.item3.col-md-3.col-6.middle-center
-      span Original Music
+      span {{ $t('index.originalMusic') }}
     .item.item4.col-md-3.col-6.middle-center
-      span Web Develop
+      span {{ $t('index.webDevelop') }}
 </template>
 
 <script lang="ts">

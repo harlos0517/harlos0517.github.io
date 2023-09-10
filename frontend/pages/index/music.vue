@@ -3,9 +3,9 @@
   .container.pb-4(v-for="worktype in worktypes")
     .row.head-wrapper.flex-wrap.mb-3
       .col-12.text-center
-        span.worktype-name {{ worktype.name }}
+        span.worktype-name {{ $t(`music.${worktype}`) }}
       .col-12: hr.mb-0
-    .row.work.my-2.py-2(v-for="work in works.filter(w => w.type === worktype.type)")
+    .row.work.my-2.py-2(v-for="work in works.filter(w => w.type === worktype)")
       .col-md-10.col-8 {{ work.name }}
       .col-md-1.col-2.text-center
         a(v-if="work.youtube" :href="work.youtube" target="_blank")
@@ -19,15 +19,15 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 
 const worktypes = [
-  { type: 'original', name: 'Original Music' },
-  { type: 'orchestraarr', name: 'Orchestra Arrangement' },
-  { type: 'windbandarr', name: 'Wind Band Arrangement' },
-  { type: 'chamberarr', name: 'Chamber Arrangement' },
-  { type: 'pianoarr', name: 'Piano Arrangement' },
-  { type: 'accomp', name: 'Accompany Track' },
-  { type: 'pianocover', name: 'Piano Cover' },
-  { type: 'remix', name: 'Remix' },
-  { type: 'fulltranscript', name: 'Full Transcript' },
+  'original',
+  'orchestraarr',
+  'windbandarr',
+  'chamberarr',
+  'pianoarr',
+  'accomp',
+  'pianocover',
+  'remix',
+  'fulltranscript',
   // { type: 'leadsheet', name: 'Lead Sheet' },
   // { type: 'dpsp', name: 'DPSP (Deemo Piano Score Project)' },
   // { type: 'condensed', name: 'Wind Band Condensed Score (for Educational Purposes)' },
@@ -35,13 +35,17 @@ const worktypes = [
 ]
 
 const works = [
+  { type: 'original', name: 'KiaraAlter BGM', youtube: 'https://youtu.be/qFEwRpiRMW4' },
+  { type: 'original', name: '遙觀星象 (ゆらり星を眺める) - Stargazers (夏語遙 YAO AI Ver.)', youtube: 'https://youtu.be/2HxwV5iEhSk' },
+  { type: 'original', name: '遙觀星象 (ゆらり星を眺める) - Stargazers', youtube: 'https://youtu.be/NQdxwDt-TZ0' },
   { type: 'original', name: 'Origin of the Winds 風の起源 (Wind Band)', youtube: 'https://youtu.be/keNRuTFXM6M', musescore: 'https://musescore.com/user/290451/scores/10383688' },
   { type: 'original', name: '雪蒂絲貓 Snowcat', youtube: 'https://youtu.be/BslFuth59ZQ' },
   { type: 'original', name: '海の旋律 (The Melody of Sea)', youtube: 'https://youtu.be/a0SUS6HOh9Y', musescore: 'https://musescore.com/user/290451/scores/6264353' },
-  { type: 'original', name: '淡聲 - 王馨瑜/Deemo Harlos/陳昱廷 (mutual work) ', youtube: 'https://youtu.be/ghsKRMIduRs' },
+  { type: 'original', name: '淡聲 - 王馨瑜/Harlos/陳昱廷 (mutual work) ', youtube: 'https://youtu.be/ghsKRMIduRs' },
   { type: 'original', name: 'Origin of the Winds (Chamber)', musescore: 'https://musescore.com/user/290451/scores/6579664' },
   { type: 'original', name: 'Fiery Phoenix Queen (The Day of The Phoenix) - KFP (mutual work)', youtube: 'https://youtu.be/n0bWcxMAiY4', musescore: 'https://musescore.com/user/290451/scores/6863066' },
 
+  { type: 'orchestraarr', name: 'Nine Point Eight - Mili', youtube: 'https://youtu.be/nrmnHo-aXz8' },
   { type: 'orchestraarr', name: 'The Phoenix (Orchestral Suite from Takanashi Kiara)', youtube: 'https://youtu.be/bDkLQRXu-HU', musescore: 'https://musescore.com/user/290451/scores/8172327' },
   { type: 'orchestraarr', name: 'The Phoenix Will Go On (from HINOTORI - Takanashi Kiara/五条下位)', musescore: 'https://musescore.com/user/290451/scores/6799869' },
   { type: 'orchestraarr', name: 'Astrogirl - Tsukumo Sana', youtube: 'https://youtu.be/ukP-5RvJE9Q', musescore: 'https://musescore.com/user/290451/scores/8362872' },
@@ -140,7 +144,7 @@ const works = [
   // { type: 'other', musescore: 'https://musescore.com/user/290451/scores/7099755', name: 'Grace Kelly - MIKA (chorus A Capella Choir Arr. by Enna Alouette)' },
   // { type: 'other', musescore: 'https://musescore.com/user/290451/scores/6767070', name: 'Hot Cross Buns (Recorder Solo Cover by Mori Calliope)' },
   // { type: 'other', musescore: 'https://musescore.com/user/290451/scores/5422822', name: 'Sdorica Main Theme (Piano Ver.) - Chamber Chu' },
-  // { type: 'other', musescore: 'https://musescore.com/user/290451/scores/1720561', name: '[imcomplete] The Bells of Notre Dame (Windband Arr. Deemo Harlos)' },
+  // { type: 'other', musescore: 'https://musescore.com/user/290451/scores/1720561', name: '[imcomplete] The Bells of Notre Dame (Windband Arr. Harlos)' },
 ]
 
 export default defineComponent({

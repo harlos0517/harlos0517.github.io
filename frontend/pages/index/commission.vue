@@ -1,98 +1,238 @@
 <template lang="pug">
-#commission
-  .container
-    h3.pb-4 Commission Price Estimation Tool
-    .row.pb-4
-      .col-12.col-md-3.py-2 Commission Type
-      .col-12.col-md-9: b-form-radio-group(v-model="selectedOriginal" :options="originalOptions")
-    .row.pb-4
-      .col-12.col-md-3.py-2 Music Type
-      .col-12.col-md-9: b-form-select(v-model="selectedType" :options="typeOptions")
-    .row.pb-4(v-if="selectedType === 'other'")
-      .col-12.col-md-3.py-2 Instrument Count
-      .col-12.col-md-9: b-form-input(v-model="tracks" :min="1" :max="20" type="number")
-    .row.pb-4
-      .col-12.col-md-3.py-2 Music Length
-      .col-12.col-md-9: b-form-input(v-model="minutes" :min="0.5" :max="15" :step="0.5"  type="number")
-    .row.pb-4
-      .col-12.col-md-3.py-2
-      .col-12.col-md-9
-        b-form-checkbox.d-inline-block.mr-4(v-if="selectedOriginal" v-model="isCommercial") Commercial
-        b-form-checkbox.d-inline-block(v-model="isPerpetual") Perpetual
-    .row.pb-4
-      .col-12.col-md-3.py-2 Currency
-      .col-12.col-md-9: b-form-radio-group(v-model="selectedCurrency" :options="currencyOptions")
-    .row.pb-4
-      .col-12.col-md-3.py-2 Estimated Price
-      .col-12.col-md-9: h4 $ {{ priceEstimation }} {{ selectedCurrency.toUpperCase() }}
+#commission.container
+  h2 {{ $t('commission.harlosMusicCommission') }}
+  ul
+    li
+      BIconCheckCircleFill.text-success.mr-1
+      | {{ $t('commission.preferStyle') }}
+    li
+      BIconExclamationTriangleFill.text-warning.mr-1
+      | {{ $t('commission.notPreferStyle') }}
+    li
+      BIconCheckCircleFill.text-success.mr-1
+      | {{ $t('commission.preferArr') }}
+    li
+      BIconExclamationTriangleFill.text-warning.mr-1
+      | {{ $t('commission.notPreferArr') }}
+    li
+      BIconMusicNoteBeamed.text-info.mr-1
+      i18n(path="commission.collectionReference")
+        template(v-slot:collection)
+          NuxtLink(to="/music") {{ $t('navbar.collection') }}
+  b-alert(variant="warning" show).
+    {{ $t('commission.arrNoCommercial') }}
+  b-alert(variant="warning" show)
+    i18n(path="commission.mixNotice")
+      template(v-slot:iAmNotProMix)
+        b {{ $t('commission.iAmNotProMix') }}
+      template(v-slot:br)
+        br
+      template(v-slot:otherThan)
+        b {{ $t('commission.otherThan') }}
+      template(v-slot:musescore4)
+        a(href="https://www.youtube.com/watch?v=nrmnHo-aXz8" target="_blank")
+          | {{ $t('commission.example') }}
+      template(v-slot:uvi)
+        a(href="https://www.youtube.com/watch?v=QuZRjmUx7M4" target="_blank")
+          | {{ $t('commission.example') }}
+
+  h2 {{ $t('commission.process') }}
+  b-list-group
+    b-list-group-item(variant="primary")
+      h5: b 1. {{ $t('commission.dm') }}
+      ul
+        li {{ $t('commission.yourName') }}
+        li {{ $t('commission.musicUsage') }}
+        li {{ $t('commission.commercialPerpetual') }}
+        li {{ $t('commission.musicLength') }}
+        li {{ $t('commission.musicStyle') }}
+        li {{ $t('commission.useInstrument') }}
+        li {{ $t('commission.reference') }}
+        li {{ $t('commission.repeat') }}
+        li {{ $t('commission.mixing') }}
+        li {{ $t('commission.other') }}
+        li {{ $t('commission.deadline') }}
+    b-list-group-item(variant="primary")
+      h5: b 2. {{ $t('commission.discussion') }}
+      ul
+        li {{ $t('commission.screenshot') }}
+    b-list-group-item(variant="warning")
+      h5: b 3. {{ $t('commission.draft') }}
+      ul
+        li {{ $t('commission.draftModify') }}
+        li {{ $t('commission.deposit') }}
+        li {{ $t('commission.depositNoReturn') }}
+    b-list-group-item(variant="warning")
+      h5: b 4. {{ $t('commission.beforeMix') }}
+      ul
+        li {{ $t('commission.beforeMixModify') }}
+    b-list-group-item(variant="success")
+      h5: b 5. {{ $t('commission.mixStage') }}
+      ul
+        li {{ $t('commission.recieveFile') }}
+        li {{ $t('commission.googleDrive') }}
+    b-list-group-item(variant="info")
+      h5: b 6. {{ $t('commission.after') }}
+
+  h2 {{ $t('commission.priceEstimationTool') }}
+  b-alert(variant="warning" show).
+    {{ $t('commission.priceDisclaimer') }}
+  Price-Tool
+
+  h2 {{ $t('commission.commercialPerpetualTitle') }}
+  div.table-wrapper
+    b-table-simple(table-variant="dark" striped bordered fixed)
+      col(style="width: 40px")
+      b-thead
+        b-tr.text-center
+          b-th
+          b-th {{ $t('commission.noComNoPer') }}<br>{{ $t('commission.price') }} x 1
+          b-th {{ $t('commission.comNoPer') }}<br>{{ $t('commission.price') }} x 2
+          b-th {{ $t('commission.noComPer') }}<br>{{ $t('commission.price') }} x 3
+          b-th {{ $t('commission.comPer') }}<br>{{ $t('commission.price') }} x 6
+          b-th {{ $t('commission.fullPer') }}<br>{{ $t('commission.price') }} x 10
+      b-tbody
+        b-tr.allow
+          b-th(sticky-column)
+            With-Perm(:allow="true") {{ $t('commission.iCan') }}
+          b-td(colspan=2)
+            With-Perm(:allow="true")  {{ $t('commission.publicProcess') }}
+            With-Perm(:allow="true") {{ $t('commission.publishPersonally') }}
+            With-Perm(:allow="true") {{ $t('commission.putInCollection') }}
+            With-Perm(:allow="true") {{ $t('commission.modifyAndPublish') }}
+          b-td(colspan=2)
+            With-Perm(:allow="true"): span(v-html="$t('commission.share')")
+          b-td
+            With-Perm(:allow="true") {{ $t('commission.preserveCopyright') }}
+        b-tr.disallow
+          b-th(sticky-column)
+            With-Perm(:allow="false") {{ $t('commission.iCant') }}
+          b-td(colspan=2)
+            With-Perm(:allow="false") {{ $t('commission.sell') }}
+            With-Perm(:allow="false") {{ $t('commission.submit') }}
+          b-td(colspan=2)
+            With-Perm(:allow="false") {{ $t('commission.publicProcessInAdvance') }}
+            With-Perm(:allow="false") {{ $t('commission.putInCollection') }}
+            With-Perm(:allow="false") {{ $t('commission.modifyAndPublish') }}
+            With-Perm(:allow="false") {{ $t('commission.sell') }}
+            With-Perm(:allow="false") {{ $t('commission.submit') }}
+          b-td
+            With-Perm(:allow="false") {{ $t('commission.publish') }}
+            With-Perm(:allow="false") {{ $t('commission.putInCollection') }}
+            With-Perm(:allow="false") {{ $t('commission.modifyAndPublish') }}
+            With-Perm(:allow="false") {{ $t('commission.sell') }}
+            With-Perm(:allow="false") {{ $t('commission.submit') }}
+        b-tr.allow
+          b-th(rowspan=3 sticky-column)
+            With-Perm(:allow="true") {{ $t('commission.youCan') }}
+          b-td.text-center(colspan=4)
+            With-Perm(:allow="true") {{ $t('commission.publishPersonally') }} {{ $t('commission.credit') }}
+          b-td
+            With-Perm(:allow="true") {{ $t('commission.publishPersonally') }}
+        b-tr.allow
+          b-td(rowspan=2)
+          b-td(rowspan=2)
+            With-Perm(:allow="true") {{ $t('commission.commercialUse') }}
+          b-td.text-center(colspan=3)
+            With-Perm(:allow="true") {{ $t('commission.getFiles') }}
+            With-Perm(:allow="true") {{ $t('commission.modify') }}
+        b-tr.allow
+          b-td
+          b-td
+            With-Perm(:allow="true") {{ $t('commission.commercialUse') }}
+            With-Perm(:allow="true") {{ $t('commission.sell') }} {{ $t('commission.credit') }}
+          b-td
+            With-Perm(:allow="true") {{ $t('commission.commercialUseAndPublish') }}
+            With-Perm(:allow="true") {{ $t('commission.sell') }}
+        b-tr.disallow
+          b-th(rowspan=2 sticky-column)
+            With-Perm(:allow="false") {{ $t('commission.youCant') }}
+          b-td.text-center(colspan=5)
+            With-Perm(:allow="false") {{ $t('commission.sayYouDidIt') }}
+        b-tr.disallow
+          b-td
+            With-Perm(:allow="false") {{ $t('commission.commercialUse') }}
+            With-Perm(:allow="false") {{ $t('commission.modify') }}
+            With-Perm(:allow="false") {{ $t('commission.sell') }}
+          b-td
+            With-Perm(:allow="false") {{ $t('commission.modify') }}
+            With-Perm(:allow="false") {{ $t('commission.sell') }}
+          b-td
+            With-Perm(:allow="false") {{ $t('commission.commercialUse') }}
+            With-Perm(:allow="false") {{ $t('commission.sell') }}
+          b-td
+          b-td
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from '@nuxtjs/composition-api'
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Option<T = unknown, U = any> = T & { value: U, text: string }
-type Options<T = unknown> = Option<T>[]
-
-const originalOptions: Options<{ price: Record<string, number> }> = [
-  { value: true, text: 'Original', price: { twd: 300, usd: 10 } },
-  { value: false, text: 'Arrangement', price: { twd: 150, usd: 5 } },
-]
-
-const typeOptions: Options<{ tracks?: number }> = [
-  { value: 'piano', text: 'Piano', tracks: 1 },
-  { value: 'orchestra', text: 'Orchestra / Wind Band', tracks: 20 },
-  { value: 'pop', text: 'Pop Music Arrangement', tracks: 6 },
-  { value: 'other', text: 'Other' },
-]
-
-const currencyOptions: Options = [
-  { value: 'twd', text: 'TWD' },
-  { value: 'usd', text: 'USD' },
-]
+import { defineComponent } from '@nuxtjs/composition-api'
+import {
+  BIconCheckCircleFill,
+  BIconExclamationTriangleFill,
+  BIconMusicNoteBeamed,
+  BIconXCircleFill,
+} from 'bootstrap-vue'
 
 export default defineComponent({
+  components: {
+    BIconCheckCircleFill,
+    BIconExclamationTriangleFill,
+    BIconMusicNoteBeamed,
+    BIconXCircleFill,
+  },
   setup() {
-    const selectedOriginal = ref(originalOptions[0]?.value || null)
-    const selectedType = ref(typeOptions[0]?.value || null)
-    const minutes = ref(3)
-    const tracks = ref(5)
-    const isCommercial = ref(false)
-    const isPerpetual = ref(false)
-    const selectedCurrency = ref(currencyOptions[0]?.value || null)
-
-    const priceEstimation = computed(() => {
-      const price = originalOptions.find(o => o.value === selectedOriginal.value)?.price
-      const priceSingle = price?.[selectedCurrency.value] || 0
-      const typeTracks = typeOptions.find(o => o.value === selectedType.value)?.tracks
-      const trackCount = 2 + Math.min(10, typeTracks || tracks.value)
-      const minuteCount = 2 + Number(minutes.value)
-      const ratio = (isCommercial.value && selectedOriginal.value ? 2 : 1) * (isPerpetual.value ? 2 : 1)
-      return priceSingle * trackCount * minuteCount * ratio
-    })
-
-    return {
-      originalOptions,
-      selectedOriginal,
-      typeOptions,
-      selectedType,
-      tracks,
-      minutes,
-      isCommercial,
-      isPerpetual,
-      currencyOptions,
-      selectedCurrency,
-      priceEstimation,
-    }
+    return {}
   },
 })
 </script>
 
 <style lang="sass" scoped>
 #commission
-  input, select
+  margin-bottom: 5rem
+  h2
     background-color: black
-    color: white
-  .row
-    align-items: center
+    position: sticky
+    top: 0
+    z-index: 2
+    padding: 1rem 0
+    margin: 1rem 0
+    border-bottom: #999999 solid 1px
+  ul
+    margin: 0
+    padding-left: 30px
+  li
+    margin: .5rem 0
+  a
+    color: #999999
+  .alert-warning
+    background-color: #856404
+    color: #fff3cd
+    border-color: #ffeeba
+    a
+      color: #00BBBB
+  .list-group
+    .list-group-item
+      border-color: #DDDDDD
+      h5
+        margin-top: .5rem
+    .list-group-item-primary
+      background-color: #002042
+      color: #b8daff
+    .list-group-item-warning
+      background-color: #423202
+      color: #fff3cd
+    .list-group-item-success
+      background-color: #0A2B12
+      color: #c3e6cb
+    .list-group-item-info
+      background-color: #062A30
+      color: #bee5eb
+  .table-wrapper
+    overflow-x: auto
+    table
+      min-width: 800px
+      td, th
+        border-color: #999999
+        align-content: center
+        justify-content: center
 </style>
