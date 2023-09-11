@@ -3,6 +3,11 @@
   h2 {{ $t('commission.harlosMusicCommission') }}
   ul
     li
+      BIconMusicNoteBeamed.text-info.mr-1
+      | {{ $t('commission.original') }}
+      BIconMusicNoteBeamed.text-info.ml-3.mr-1
+      | {{ $t('commission.arrangement') }}
+    li
       BIconCheckCircleFill.text-success.mr-1
       | {{ $t('commission.preferStyle') }}
     li
@@ -48,7 +53,6 @@
         li {{ $t('commission.musicStyle') }}
         li {{ $t('commission.useInstrument') }}
         li {{ $t('commission.reference') }}
-        li {{ $t('commission.repeat') }}
         li {{ $t('commission.mixing') }}
         li {{ $t('commission.other') }}
         li {{ $t('commission.deadline') }}
@@ -57,22 +61,25 @@
       ul
         li {{ $t('commission.screenshot') }}
     b-list-group-item(variant="warning")
-      h5: b 3. {{ $t('commission.draft') }}
+      h5: b 3. {{ $t('commission.deposit') }}
+      ul
+        li {{ $t('commission.depositDesc') }}
+        li {{ $t('commission.depositNoReturn') }}
+    b-list-group-item(variant="primary")
+      h5: b 4. {{ $t('commission.draft') }}
       ul
         li {{ $t('commission.draftModify') }}
-        li {{ $t('commission.deposit') }}
-        li {{ $t('commission.depositNoReturn') }}
     b-list-group-item(variant="warning")
-      h5: b 4. {{ $t('commission.beforeMix') }}
+      h5: b 5. {{ $t('commission.beforeMix') }}
       ul
         li {{ $t('commission.beforeMixModify') }}
     b-list-group-item(variant="success")
-      h5: b 5. {{ $t('commission.mixStage') }}
+      h5: b 6. {{ $t('commission.mixStage') }}
       ul
         li {{ $t('commission.recieveFile') }}
         li {{ $t('commission.googleDrive') }}
     b-list-group-item(variant="info")
-      h5: b 6. {{ $t('commission.after') }}
+      h5: b 7. {{ $t('commission.after') }}
 
   h2 {{ $t('commission.priceEstimationTool') }}
   b-alert(variant="warning" show).
