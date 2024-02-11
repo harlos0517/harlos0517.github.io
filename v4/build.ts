@@ -5,9 +5,9 @@ import sass from 'sass'
 
 import { types, works } from './collection'
 
-const pugPages = ['index']
-const sassStyles = ['layout', 'index', 'commission', 'commission.en', 'collection']
-const staticFolders = ['images', 'scripts']
+const pugPages = ['index', 'commission', 'collection']
+const sassStyles = ['layout', 'index', 'commission', 'commission.en', 'commission.zh', 'collection']
+const staticFolders = ['images']
 
 const sourceDir = 'src'
 const destDir = '../docs'

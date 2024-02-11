@@ -20,31 +20,30 @@ html
       crossorigin="anonymous"
     )
     link(rel="stylesheet" href="/layout.css")
-    script(src="/scripts/jQuery.min.js")
   body
     script.
-      const body = $('body')
+      const body = document.querySelector('body');
       // set different background for different time of day
-      const date = new Date()
-      const hour = date.getHours()
-      if (hour > 18 || hour < 6)
-        body.css('background-image', 'url("/images/rune-b.png")')
-      else
-        body.css('background-image', 'url("/images/rune-a.png")')
-
-      const moveBackground = () => {
-        const scroll = $(window).scrollTop();
-        const maxScrollHeight = body.height() - window.innerHeight;
-        const enlargePercentage = 200
-        const veritcalPercentage = scroll / maxScrollHeight * 100
-        body.css('backgroundSize', 'auto ' + enlargePercentage + '%');
-        body.css('backgroundPosition', '52.6% ' + veritcalPercentage + '%');
+      const date = new Date();
+      const hour = date.getHours();
+      if (hour > 18 || hour < 6) {
+        body.style.backgroundImage = 'url("/images/rune-b.jpg")';
+      } else {
+        body.style.backgroundImage = 'url("/images/rune-a.jpg")';
       }
 
+      const moveBackground = () => {
+        const scroll = window.scrollY;
+        const maxScrollHeight = body.offsetHeight - window.innerHeight;
+        const enlargePercentage = 200;
+        const veritcalPercentage = (scroll / maxScrollHeight) * 100;
+        body.style.backgroundSize = 'auto ' + enlargePercentage + '%';
+        body.style.backgroundPosition = '50% ' + veritcalPercentage + '%';
+      };
+
       // change background position on scroll and resize
-      $(window).on('scroll', moveBackground)
-      $(window).on('resize', moveBackground)
-      moveBackground()
+      window.addEventListener('scroll', moveBackground);
+      window.addEventListener('resize', moveBackground);
+      moveBackground();
     block content
-    script(src="https://unpkg.com/petite-vue@0.2.2/dist/petite-vue.iife.js" defer)
 

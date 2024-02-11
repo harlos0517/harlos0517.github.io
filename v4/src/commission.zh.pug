@@ -1,0 +1,165 @@
+mixin With-Perm(allow)
+  if allow
+    span.text-success.me-1.inline-icon: include icons/checkcircle.html
+  else
+    span.text-danger.me-1.inline-icon: include icons/xcircle.html
+  block
+  br
+
+link(rel="stylesheet" href="/commission.zh.css")
+ul
+  li
+    span.inline-icon.text-info.me-1: include icons/musicnote.html
+    | #[:t(lang="zh-TW") commission.original]
+    span.inline-icon.text-info.ms-3.me-1: include icons/musicnote.html
+    | #[:t(lang="zh-TW") commission.arrangement]
+  li
+    span.inline-icon.text-success.me-1: include icons/checkcircle.html
+    | #[:t(lang="zh-TW") commission.preferStyle]
+  li
+    span.inline-icon.text-warning.me-1: include icons/warning.html
+    | #[:t(lang="zh-TW") commission.notPreferStyle]
+  li
+    span.inline-icon.text-success.me-1: include icons/checkcircle.html
+    | #[:t(lang="zh-TW") commission.preferArr]
+  li
+    span.inline-icon.text-warning.me-1: include icons/warning.html
+    | #[:t(lang="zh-TW") commission.notPreferArr]
+  li
+    span.inline-icon.text-info.me-1: include icons/musicnote.html
+    | #[:t(lang="zh-TW") commission.collectionReference]
+.alert.alert-warning(show).
+  #[:t(lang="zh-TW") commission.arrNoCommercial]
+.alert.alert-warning(show)
+  b #[:t(lang="zh-TW") commission.iAmNotProMix]
+  br
+  | #[:t(lang="zh-TW") commission.mixNotice]
+
+h3 #[:t(lang="zh-TW") commission.process]
+.list-group
+  .list-group-item.list-group-item-primary
+    h5: b 1. #[:t(lang="zh-TW") commission.dm]
+    ul
+      li #[:t(lang="zh-TW") commission.yourName]
+      li #[:t(lang="zh-TW") commission.musicUsage]
+      li #[:t(lang="zh-TW") commission.commercialPerpetual]
+      li #[:t(lang="zh-TW") commission.musicLength]
+      li #[:t(lang="zh-TW") commission.musicStyle]
+      li #[:t(lang="zh-TW") commission.useInstrument]
+      li #[:t(lang="zh-TW") commission.reference]
+      li #[:t(lang="zh-TW") commission.mixing]
+      li #[:t(lang="zh-TW") commission.other]
+      li #[:t(lang="zh-TW") commission.deadline]
+  .list-group-item.list-group-item-primary
+    h5: b 2. #[:t(lang="zh-TW") commission.discussion]
+    ul
+      li #[:t(lang="zh-TW") commission.screenshot]
+  .list-group-item.list-group-item-warning
+    h5: b 3. #[:t(lang="zh-TW") commission.deposit]
+    ul
+      li #[:t(lang="zh-TW") commission.depositDesc]
+      li #[:t(lang="zh-TW") commission.depositNoReturn]
+  .list-group-item.list-group-item-primary
+    h5: b 4. #[:t(lang="zh-TW") commission.draft]
+    ul
+      li #[:t(lang="zh-TW") commission.draftModify]
+  .list-group-item.list-group-item-warning
+    h5: b 5. #[:t(lang="zh-TW") commission.beforeMix]
+    ul
+      li #[:t(lang="zh-TW") commission.beforeMixModify]
+  .list-group-item.list-group-item-success
+    h5: b 6. #[:t(lang="zh-TW") commission.mixStage]
+    ul
+      li #[:t(lang="zh-TW") commission.recieveFile]
+      li #[:t(lang="zh-TW") commission.googleDrive]
+  .list-group-item.list-group-item-info
+    h5: b 7. #[:t(lang="zh-TW") commission.after]
+
+h3 #[:t(lang="zh-TW") commission.priceEstimationTool]
+.alert.alert-warning(show).
+  #[:t(lang="zh-TW") commission.priceDisclaimer]
+include pricetool.zh.pug
+
+h3 #[:t(lang="zh-TW") commission.commercialPerpetualTitle]
+div.table-wrapper
+  table.table.table-striped.table-bordered.table-dark
+    col(style="width: 40px")
+    thead
+      tr.text-center
+        th
+        th #[:t(lang="zh-TW") commission.noComNoPer]<br>#[:t(lang="zh-TW") commission.price] x 1
+        th #[:t(lang="zh-TW") commission.comNoPer]<br>#[:t(lang="zh-TW") commission.price] x 1.5 ~ 2
+        th #[:t(lang="zh-TW") commission.noComPer]<br>#[:t(lang="zh-TW") commission.price] x 3
+        th #[:t(lang="zh-TW") commission.comPer]<br>#[:t(lang="zh-TW") commission.price] x 4.5 ~ 6
+        th #[:t(lang="zh-TW") commission.fullPer]<br>#[:t(lang="zh-TW") commission.price] x 10
+    tbody
+      tr.allow
+        th(sticky-column)
+          +With-Perm(true) #[:t(lang="zh-TW") commission.iCan]
+        td(colspan=2)
+          +With-Perm(true) #[:t(lang="zh-TW") commission.publicProcess]
+          +With-Perm(true) #[:t(lang="zh-TW") commission.publishPersonally]
+          +With-Perm(true) #[:t(lang="zh-TW") commission.putInCollection]
+          +With-Perm(true) #[:t(lang="zh-TW") commission.modifyAndPublish]
+        td(colspan=2)
+          +With-Perm(true) #[:t(lang="zh-TW") commission.share]
+        td
+          +With-Perm(true) #[:t(lang="zh-TW") commission.preserveCopyright]
+      tr.disallow
+        th(sticky-column)
+          +With-Perm(false) #[:t(lang="zh-TW") commission.iCant]
+        td(colspan=2)
+          +With-Perm(false) #[:t(lang="zh-TW") commission.sell]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.submit]
+        td(colspan=2)
+          +With-Perm(false) #[:t(lang="zh-TW") commission.publicProcessInAdvance]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.putInCollection]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.modifyAndPublish]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.sell]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.submit]
+        td
+          +With-Perm(false) #[:t(lang="zh-TW") commission.publish]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.putInCollection]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.modifyAndPublish]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.sell]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.submit]
+      tr.allow
+        th(rowspan=3 sticky-column)
+          +With-Perm(true) #[:t(lang="zh-TW") commission.youCan]
+        td.text-center(colspan=4)
+          +With-Perm(true) #[:t(lang="zh-TW") commission.publishPersonally] #[:t(lang="zh-TW") commission.credit]
+        td
+          +With-Perm(true) #[:t(lang="zh-TW") commission.publishPersonally]
+      tr.allow
+        td(rowspan=2)
+        td(rowspan=2)
+          +With-Perm(true) #[:t(lang="zh-TW") commission.commercialUse]
+        td.text-center(colspan=3)
+          +With-Perm(true) #[:t(lang="zh-TW") commission.getFiles]
+          +With-Perm(true) #[:t(lang="zh-TW") commission.modify]
+      tr.allow
+        td
+        td
+          +With-Perm(true) #[:t(lang="zh-TW") commission.commercialUse]
+          +With-Perm(true) #[:t(lang="zh-TW") commission.sell] #[:t(lang="zh-TW") commission.credit]
+        td
+          +With-Perm(true) #[:t(lang="zh-TW") commission.commercialUseAndPublish]
+          +With-Perm(true) #[:t(lang="zh-TW") commission.sell]
+      tr.disallow
+        th(rowspan=2 sticky-column)
+          +With-Perm(false) #[:t(lang="zh-TW") commission.youCant]
+        td.text-center(colspan=5)
+          +With-Perm(false) #[:t(lang="zh-TW") commission.sayYouDidIt]
+      tr.disallow
+        td
+          +With-Perm(false) #[:t(lang="zh-TW") commission.commercialUse]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.modify]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.sell]
+        td
+          +With-Perm(false) #[:t(lang="zh-TW") commission.modify]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.sell]
+        td
+          +With-Perm(false) #[:t(lang="zh-TW") commission.commercialUse]
+          +With-Perm(false) #[:t(lang="zh-TW") commission.sell]
+        td
+        td
