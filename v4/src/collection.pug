@@ -1,3 +1,5 @@
+extends /layout.pug
+
 mixin collection(type, typeName, collections)
   .pb-4
   .row.head-wrapper.flex-wrap.mb-3
@@ -16,19 +18,23 @@ mixin collection(type, typeName, collections)
           a.musescore(href=work.musescore target="_blank")
             include icons/musescore.html
 
-#collection.container
+block content
   link(rel="stylesheet" href="/collection.css")
-  .wrapper
-    .pb-4
-    .row.head-wrapper.flex-wrap.mb-3
-      .col-12.text-center
-        h2.worktype-name
-          | #[:t(lang="zh-TW") index.collection]
-          br
-          small: span #[:t(lang="en") index.collection]
-    for collectionType in collectionTypes
-      +collection(
-        collectionType,
-        t('music.' + collectionType, 'zh-TW') + ' | ' + t('music.' + collectionType, 'en'),
-        collections.filter(w => w.type === collectionType)
-      )
+  #collection.container
+    link(rel="stylesheet" href="/collection.css")
+    .wrapper.position-relative
+      #back.position-absolute.top-0.start-0.p-4.text-center
+        a(href="/"): include icons/back.html
+      .pb-4
+      .row.head-wrapper.flex-wrap.mb-3
+        .col-12.text-center
+          h2.worktype-name
+            | #[:t(lang="zh-TW") index.collection]
+            br
+            small: span #[:t(lang="en") index.collection]
+      for collectionType in collectionTypes
+        +collection(
+          collectionType,
+          t('music.' + collectionType, 'zh-TW') + ' | ' + t('music.' + collectionType, 'en'),
+          collections.filter(w => w.type === collectionType)
+        )
