@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    title title
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="Harlos Music")
+    meta(property="og:description" content="Pop Pianist, Percussionist, Arranger, Composer, Web Developer")
+    meta(property="og:image" content="/images/og.png")
+    meta(property="og:url" content="https://harlos.me")
+    meta(name="description" content="Pop Pianist, Percussionist, Arranger, Composer, Web Developer")
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="icon" type="image/x-icon" href="/images/favicon.png")
+    link(
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    )
+    link(rel="stylesheet" href="/layout.css")
+    script(src="/scripts/jQuery.min.js")
+  body
+    script.
+      const body = $('body')
+      // set different background for different time of day
+      const date = new Date()
+      const hour = date.getHours()
+      if (hour > 18 || hour < 6)
+        body.css('background-image', 'url("/images/rune-b.png")')
+      else
+        body.css('background-image', 'url("/images/rune-a.png")')
+
+      const moveBackground = () => {
+        const scroll = $(window).scrollTop();
+        const maxScrollHeight = body.height() - window.innerHeight;
+        const enlargePercentage = 200
+        const veritcalPercentage = scroll / maxScrollHeight * 100
+        body.css('backgroundSize', 'auto ' + enlargePercentage + '%');
+        body.css('backgroundPosition', '52.6% ' + veritcalPercentage + '%');
+      }
+
+      // change background position on scroll and resize
+      $(window).on('scroll', moveBackground)
+      $(window).on('resize', moveBackground)
+      moveBackground()
+    block content
+    script(src="https://unpkg.com/petite-vue@0.2.2/dist/petite-vue.iife.js" defer)
+
