@@ -1,0 +1,116 @@
+#price-tool(v-scope="PriceTool()")
+  .row
+    .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.commissionType]
+    .col-12.col-md-9
+      input#original.form-check-input(type="radio" name="original" :value="true" v-model="selectedOriginal")
+      label.form-check-label(for="original") #[:t(lang="zh-TW") priceTool.original]
+      input#arrange.form-check-input(type="radio" name="original" :value="false" v-model="selectedOriginal" :onClick="setCommercialNone")
+      label.form-check-label(for="arrange") #[:t(lang="zh-TW") priceTool.arrangement]
+  .row.pb-4
+    .col-12.col-md-3.py-2
+    .long.col-12.col-md-9
+      span
+        input#none.form-check-input(type="radio" name="commercial" value="none" v-model="selectedCommercial")
+        label.form-check-label(for="none") #[:t(lang="zh-TW") priceTool.none]
+      span
+        input#personal.form-check-input(v-if="selectedOriginal" type="radio" name="commercial" value="personal" v-model="selectedCommercial")
+        label.form-check-label(v-if="selectedOriginal" for="personal") #[:t(lang="zh-TW") priceTool.personal]
+      span
+        input#full.form-check-input(v-if="selectedOriginal" type="radio" name="commercial" value="full" v-model="selectedCommercial")
+        label.form-check-label(v-if="selectedOriginal" for="full") #[:t(lang="zh-TW") priceTool.full]
+      span
+        input#perpetual.form-check-input.d-inline-block(type="checkbox" v-model="isPerpetual")
+        label(for="perpetual") #[:t(lang="zh-TW") priceTool.perpetual]
+  .row.pb-4
+    .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.musicType]
+    .col-12.col-md-9: b-form-select(v-model="selectedType" :options="[]")
+      select.form-select(v-model="selectedType")
+        option(value="piano") #[:t(lang="zh-TW") priceTool.piano]
+        option(value="orchestra") #[:t(lang="zh-TW") priceTool.orchestra]
+        option(value="pop") #[:t(lang="zh-TW") priceTool.pop]
+        option(value="other") #[:t(lang="zh-TW") priceTool.other]
+  .row.pb-4(v-if="selectedType === 'other'")
+    .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.trackCount]
+    .col-12.col-md-9
+      input.form-control(type="number" min="0.5" max="15" step="0.5" v-model="tracks")
+  .row.pb-4
+    .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.musicLength]
+    .col-12.col-md-9
+      input.form-control(type="number" min="0.5" max="15" step="0.5" v-model="minutes")
+  .row.pb-4
+    .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.currency]
+    .col-12.col-md-9
+      input#ntd.form-check-input(type="radio" name="currency" value="ntd" v-model="selectedCurrency")
+      label.form-check-label(for="ntd") #[:t(lang="zh-TW") priceTool.ntd]
+      input#usd.form-check-input(type="radio" name="currency" value="usd" v-model="selectedCurrency")
+      label.form-check-label(for="usd") #[:t(lang="zh-TW") priceTool.usd]
+  .row.pb-4
+    .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.estimatedPrice]
+    .col-12.col-md-9: h4 {{ selectedCurrency.toUpperCase() }}$ {{ priceEstimation() }}
+
+  style.
+    #price-tool input,
+    #price-tool select {
+      background-color: black;
+      color: white;
+    }
+    #price-tool .row {
+      align-items: center;
+    }
+    #price-tool label {
+      margin: 0 1rem 0 .5rem;
+    }
+    @media (max-width: 575px) {
+      #price-tool .long {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+  script(type="module").
+    import { createApp } from 'https://unpkg.com/petite-vue?module'
+    const originalOptions = [
+      { value: true, price: { ntd: 200, usd: 8 } },
+      { value: false, price: { ntd: 100, usd: 4 } },
+    ]
+
+    const typeOptions = [
+      { value: 'piano', tracks: 1 },
+      { value: 'orchestra', tracks: 20 },
+      { value: 'pop', tracks: 6 },
+      { value: 'other',},
+    ]
+
+    const commercialOptions = [
+      { value: 'none', ratio: 1 },
+      { value: 'personal', ratio: 1.5 },
+      { value: 'full', ratio: 2 },
+    ]
+
+    const PriceTool = function() {
+      return {
+        selectedOriginal: true,
+        selectedType: 'piano',
+        minutes: 3,
+        tracks: 5,
+        selectedCommercial: 'none',
+        isPerpetual: false,
+        selectedCurrency: 'ntd',
+        priceEstimation() {
+          const price = originalOptions.find(o => o.value === this.selectedOriginal)?.price
+          const priceSingle = price?.[this.selectedCurrency] || 0
+          const typeTracks = typeOptions.find(o => o.value === this.selectedType)?.tracks
+          const trackCount = 2 + Math.min(8, typeTracks || this.tracks)
+          const minuteCount = 1 + Number(this.minutes)
+          const commercialRatio = !this.selectedOriginal ? 1 : commercialOptions.find(o => o.value === this.selectedCommercial)?.ratio
+          const ratio = commercialRatio * (this.isPerpetual ? 3 : 1)
+          const final = priceSingle * trackCount * minuteCount * ratio
+          return Math.max(0, Math.round(final))
+        },
+        setCommercialNone() {
+          this.selectedCommercial = 'none'
+        },
+      }
+    }
+
+    createApp({ PriceTool }).mount()

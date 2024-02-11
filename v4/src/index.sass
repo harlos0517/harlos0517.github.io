@@ -1,0 +1,113 @@
+#intro
+  font-weight: 700
+  min-height: 100vh
+  & > *
+    filter: drop-shadow(0 0 4px #000000FF)
+  #headpic
+    border-radius: 50%
+    height: 200px
+    @media screen and (max-width: 768px)
+      height: 150px
+  .description
+    .name
+      font-size: 3rem
+      @media screen and (max-width: 768px)
+        font-size: 2rem
+  .links
+    display: flex
+    flex-direction: row
+    div:not(:last-child)
+      margin-right: 3rem
+    div > a:not(:last-child)
+        margin-right: 3rem
+    @media screen and (max-width: 992px)
+      div:not(:last-child)
+        margin-right: 1.5rem
+      div > a:not(:last-child)
+        margin-right: 1.5rem
+    @media screen and (max-width: 768px)
+      flex-direction: column
+      div:not(:last-child)
+        margin-right: 0
+        margin-bottom: 1.5rem
+      div > a:not(:last-child)
+        margin-right: 1.5rem
+    a > svg
+      width: 36px
+      height: 36px
+    .youtube:hover
+      color: #FF0000
+    .twitch:hover
+      color: #9147ff
+    .musescore:hover
+      color: #2E68C0
+    .twitter:hover
+      color: #1DA1F2
+    .facebook:hover
+      color: #0866FF
+    .discord:hover
+      color: #5865F2
+    .kofi:hover
+      color: #1AC0FF
+    .ecpay:hover
+      color: #3C651C
+    .opay:hover
+      color: #227BBB
+  .more
+    a:first-child
+      margin-right: 200px
+      @media screen and (max-width: 768px)
+        margin-right: 80px
+    a > svg
+      width: 120px
+      height: 120px
+      @media screen and (max-width: 768px)
+        width: 60px
+        height: 60px
+  .down
+    svg
+      width: 60px
+      height: 60px
+
+#about
+  font-weight: 700
+  min-height: 100vh
+  padding-top: 6.25vh
+  & > .block
+    height: 25vh
+    margin-bottom: 6.25vh
+    background-size: cover
+    background-attachment: fixed
+    & > div
+      filter: drop-shadow(0 0 4px #000000FF)
+      max-width: 992px
+      margin: 0 auto
+  .piano
+    background-image: url('/images/sky.jpg')
+  .arrange
+    background-image: url('/images/item3.jpg')
+  .original
+    background-image: url('/images/item4.jpg')
+
+#commission
+  margin: 5rem auto
+  #lang-switch
+    *
+      width: 1.8em
+      height: 1.8em
+      border-radius: 50%
+      border: #FFFFFF99 solid 1px
+      background-color: #FFFFFF33
+    svg
+      width: 1.25em
+      height: 1.25em
+  .wrapper
+    padding: 1rem 1.5rem 2rem
+    border-radius: 10px
+    background-color: #00000088
+    & > h2
+      padding: 1rem 0
+      border-bottom: #FFFFFF99 solid 1px
+
+#blank
+  min-height: 100vh

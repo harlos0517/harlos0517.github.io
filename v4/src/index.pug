@@ -1,0 +1,86 @@
+extends /layout.pug
+block content
+  link(rel="stylesheet" href="/index.css")
+  #intro.flex-column.center.py-5
+    img#headpic(src="/images/headpic2.png")
+    .description.text-center.mt-5
+      h1 #[:t(lang="en") index.name] | #[:t(lang="zh-TW") index.name]
+      p
+        span #[:t(lang="zh-TW") index.description]
+        br
+        span #[:t(lang="en") index.description]
+    .links.mt-5
+      div
+        a.youtube(href="https://youtube.com/c/HarlosMusic"): include icons/youtube.html
+        a.twitch(href="https://twitch.tv/harlosmusic"): include icons/twitch.html
+        a.musescore(href="https://musescore.com/user/290451/"): include icons/musescore.html
+      div
+        a.twitter(href="https://twitter.com/Harlos_Music"): include icons/twitter.html
+        a.facebook(href="https://facebook.com/harlos_0517"): include icons/facebook.html
+        a.discord(href="https://discord.gg/6r4bvhr"): include icons/discord.html
+      div
+        a.kofi(href="https://ko-fi.com/harlosmusic"): include icons/kofi.html
+        a.ecpay(href="https://p.ecpay.com.tw/D09AB0F"): include icons/dollar.html
+        a.opay(href="https://p.ecpay.com.tw/D09AB0F"): include icons/dollar.html
+    .more.mt-5.flex-row
+      a.text-center(href="#collection")
+        include icons/songlist.html
+        p
+          span #[:t(lang="zh-TW") index.collection]
+          br
+          span #[:t(lang="en") index.collection]
+      a.text-center(href="#commission")
+        include icons/paper.html
+        p
+          span #[:t(lang="zh-TW") index.commission]
+          br
+          span #[:t(lang="en") index.commission]
+  #about
+    .piano.block
+      .h-100.flex-row.justify-content-end.align-items-center: h3.px-5.text-end
+        span #[:t(lang="zh-TW") index.piano]
+        br
+        span #[:t(lang="en") index.piano]
+    .arrange.block
+      .h-100.flex-row.justify-content-start.align-items-center: h3.px-5
+        span #[:t(lang="zh-TW") index.arrange]
+        br
+        span #[:t(lang="en") index.arrange]
+    .original.block
+      .h-100.flex-row.justify-content-end.align-items-center: h3.px-5.text-end
+        span #[:t(lang="zh-TW") index.original]
+        br
+        span #[:t(lang="en") index.original]
+
+  #commission.container
+    .wrapper.position-relative
+      #lang-switch.position-absolute.top-0.end-0.p-4.text-center
+        #to-zh(style="cursor: pointer") 中
+        #to-en.ms-3(style="cursor: pointer") En
+      h2.text-center
+        | #[:t(lang="zh-TW") commission.harlosMusicCommission]
+        br
+        small #[:t(lang="en") commission.harlosMusicCommission]
+      script.
+        $(document).ready(() => {
+          $('#commission-en').hide()
+          $('#to-zh').hide()
+          $('#to-en').on('click', () => {
+            $('#commission-zh').hide()
+            $('#commission-en').show()
+            $('#to-zh').show()
+            $('#to-en').hide()
+          })
+          $('#to-zh').on('click', () => {
+            $('#commission-en').hide()
+            $('#commission-zh').show()
+            $('#to-en').show()
+            $('#to-zh').hide()
+          })
+        })
+      div#commission-zh
+        include commission.pug
+      div#commission-en
+        include commission.en.pug
+  include collection.pug
+  #blank
