@@ -1,0 +1,25 @@
+#collection {
+  margin: 5rem auto;
+}
+#collection .wrapper {
+  padding: 1rem 1.5rem 2rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5333333333);
+}
+#collection .head-wrapper hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+#collection .row.work.work:hover {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2666666667);
+}
+#collection .row.work svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+#collection .row.work .youtube:hover {
+  color: #FF0000;
+}
+#collection .row.work .musescore:hover {
+  color: #2E68C0;
+}

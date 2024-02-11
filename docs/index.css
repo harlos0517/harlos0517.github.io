@@ -1,0 +1,161 @@
+#intro {
+  font-weight: 700;
+  min-height: 100vh;
+}
+#intro > * {
+  filter: drop-shadow(0 0 4px black);
+}
+#intro #headpic {
+  border-radius: 50%;
+  height: 200px;
+}
+@media screen and (max-width: 768px) {
+  #intro #headpic {
+    height: 150px;
+  }
+}
+#intro .description .name {
+  font-size: 3rem;
+}
+@media screen and (max-width: 768px) {
+  #intro .description .name {
+    font-size: 2rem;
+  }
+}
+#intro .links {
+  display: flex;
+  flex-direction: row;
+}
+#intro .links div:not(:last-child) {
+  margin-right: 3rem;
+}
+#intro .links div > a:not(:last-child) {
+  margin-right: 3rem;
+}
+@media screen and (max-width: 992px) {
+  #intro .links div:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+  #intro .links div > a:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #intro .links {
+    flex-direction: column;
+  }
+  #intro .links div:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  #intro .links div > a:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+#intro .links a > svg {
+  width: 36px;
+  height: 36px;
+}
+#intro .links .youtube:hover {
+  color: #FF0000;
+}
+#intro .links .twitch:hover {
+  color: #9147ff;
+}
+#intro .links .musescore:hover {
+  color: #2E68C0;
+}
+#intro .links .twitter:hover {
+  color: #1DA1F2;
+}
+#intro .links .facebook:hover {
+  color: #0866FF;
+}
+#intro .links .discord:hover {
+  color: #5865F2;
+}
+#intro .links .kofi:hover {
+  color: #1AC0FF;
+}
+#intro .links .ecpay:hover {
+  color: #3C651C;
+}
+#intro .links .opay:hover {
+  color: #227BBB;
+}
+#intro .more a:first-child {
+  margin-right: 200px;
+}
+@media screen and (max-width: 768px) {
+  #intro .more a:first-child {
+    margin-right: 80px;
+  }
+}
+#intro .more a > svg {
+  width: 120px;
+  height: 120px;
+}
+@media screen and (max-width: 768px) {
+  #intro .more a > svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+#intro .down svg {
+  width: 60px;
+  height: 60px;
+}
+
+#about {
+  font-weight: 700;
+  min-height: 100vh;
+  padding-top: 6.25vh;
+}
+#about > .block {
+  height: 25vh;
+  margin-bottom: 6.25vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#about > .block > div {
+  filter: drop-shadow(0 0 4px black);
+  max-width: 992px;
+  margin: 0 auto;
+}
+#about .piano {
+  background-image: url("/images/sky.jpg");
+}
+#about .arrange {
+  background-image: url("/images/item3.jpg");
+}
+#about .original {
+  background-image: url("/images/item4.jpg");
+}
+
+#commission {
+  margin: 5rem auto;
+}
+#commission #lang-switch * {
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 50%;
+  border: rgba(255, 255, 255, 0.6) solid 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#commission #lang-switch svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+#commission .wrapper {
+  padding: 1rem 1.5rem 2rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5333333333);
+}
+#commission .wrapper > h2 {
+  padding: 1rem 0;
+  border-bottom: rgba(255, 255, 255, 0.6) solid 1px;
+}
+
+#blank {
+  min-height: 100vh;
+}
