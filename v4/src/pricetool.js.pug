@@ -1,0 +1,82 @@
+mixin PriceTool(lang)
+  script.
+    document.addEventListener('DOMContentLoaded', function() {
+      const lang = '#{lang}'
+      const form = document.getElementById('price-tool-' + lang)
+      const f = form.querySelector.bind(form)
+      const f_ = form.querySelectorAll.bind(form)
+
+      const originalOptions = {
+        true: { ntd: 200, usd: 8 },
+        false: { ntd: 100, usd: 4 },
+      }
+
+      const typeOptions = {
+        piano: 1,
+        orchestra: 20,
+        pop: 6,
+        other: null,
+      }
+
+      const commercialOptions = {
+        none: 1,
+        personal: 1.5,
+        full: 2,
+      }
+
+      const priceEstimation = function() {
+        const data = new FormData(form)
+
+        const selectedOriginal = data.get('original')
+        const selectedType = data.get('commission-type')
+        const minutes = data.get('minutes')
+        const tracks = data.get('tracks')
+        const selectedCommercial = data.get('commercial')
+        const isPerpetual = data.get('perpetual') === 'on'
+        const selectedCurrency = data.get('currency')
+
+        const price = originalOptions[selectedOriginal]
+        const priceSingle = price?.[selectedCurrency] || 0
+        const typeTracks = typeOptions[selectedType] || null
+        const trackCount = 2 + Math.min(8, typeTracks || tracks || 0)
+        const minuteCount = 1 + Number(minutes)
+        const commercialRatio = selectedOriginal === 'false'
+          ? 1
+          : commercialOptions[selectedCommercial] || 1
+        const ratio = commercialRatio * (isPerpetual ? 3 : 1)
+        const final = priceSingle * trackCount * minuteCount * ratio
+        f('.total').innerText = `${selectedCurrency.toUpperCase()}$ ${final}`
+      }
+
+      const onOriginalClick = function(e) {
+        f('span.commercial-personal').classList.toggle('d-none', false)
+        f('span.commercial-full').classList.toggle('d-none', false)
+        priceEstimation()
+      }
+
+      const onArrangeClick = function(e) {
+        f('span.commercial-personal').classList.toggle('d-none', true)
+        f('span.commercial-full').classList.toggle('d-none', true)
+        f('input.commercial.none').checked = true
+        priceEstimation()
+      }
+
+      const onTypeChange = function(e) {
+        if (e.target.value === 'other') f('.other').classList.toggle('d-none', false) 
+        else f('.other').classList.toggle('d-none', true)
+        priceEstimation()
+      }
+
+      f('.original').addEventListener('click', onOriginalClick)
+      f('.arrange').addEventListener('click', onArrangeClick)
+      ;[...f_('.commercial')].forEach(e => e.addEventListener('click', priceEstimation))
+      f('.perpetual').addEventListener('click', priceEstimation)
+      f('.commission-type').addEventListener('change', onTypeChange)
+      f('.minutes').addEventListener('input', priceEstimation)
+      f('.tracks').addEventListener('input', priceEstimation)
+      ;[...f_('.currency')].forEach(e => e.addEventListener('click', priceEstimation))
+
+      f('.other').classList.toggle('d-none', true)
+      priceEstimation()
+    })
+
