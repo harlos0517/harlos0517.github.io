@@ -1,52 +1,52 @@
-#price-tool-zh
+form#price-tool-zh.price-tool
   .row
     .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.commissionType]
     .col-12.col-md-9
-      input#original-zh.form-check-input(type="radio" name="original-zh" value="true" onClick="onOriginalClickZh(this)" checked)
+      input.original.form-check-input(type="radio" name="original" value="true" checked)
       label.form-check-label(for="original") #[:t(lang="zh-TW") priceTool.original]
-      input#arrange-zh.form-check-input(type="radio" name="original-zh" value="false" onClick="onOriginalClickZh(this)")
+      input.arrange.form-check-input(type="radio" name="original" value="false")
       label.form-check-label(for="arrange") #[:t(lang="zh-TW") priceTool.arrangement]
   .row.pb-4
     .col-12.col-md-3.py-2
     .long.col-12.col-md-9
       span
-        input#none-zh.form-check-input(type="radio" name="commercial-zh" value="none" onClick="onCommercialClickZh(this)" checked)
+        input.commercial.none.form-check-input(type="radio" name="commercial" value="none" checked)
         label.form-check-label(for="none") #[:t(lang="zh-TW") priceTool.none]
-      span#personal-input-zh
-        input#personal-zh.form-check-input(type="radio" name="commercial-zh" value="personal" onClick="onCommercialClickZh(this)")
+      span.commercial-personal
+        input.commercial.form-check-input(type="radio" name="commercial" value="personal")
         label.form-check-label(for="personal") #[:t(lang="zh-TW") priceTool.personal]
-      span#full-input-zh
-        input#full-zh.form-check-input(type="radio" name="commercial-zh" value="full" onClick="onCommercialClickZh(this)")
+      span.commercial-full
+        input.commercial.form-check-input(type="radio" name="commercial" value="full")
         label.form-check-label(for="full") #[:t(lang="zh-TW") priceTool.full]
       span
-        input#perpetual-zh.form-check-input.d-inline-block(type="checkbox" onClick="onPerpetualClickZh(this)")
+        input.perpetual.form-check-input.d-inline-block(type="checkbox" name="perpetual")
         label(for="perpetual") #[:t(lang="zh-TW") priceTool.perpetual]
   .row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.musicType]
     .col-12.col-md-9
-      select.form-select(onChange="onTypeChangeZh(this)" value="piano")
-        option(value="piano") #[:t(lang="zh-TW") priceTool.piano]
+      select.commission-type.form-select(name="commission-type" value="piano")
+        option(value="piano" selected) #[:t(lang="zh-TW") priceTool.piano]
         option(value="orchestra") #[:t(lang="zh-TW") priceTool.orchestra]
         option(value="pop") #[:t(lang="zh-TW") priceTool.pop]
         option(value="other") #[:t(lang="zh-TW") priceTool.other]
-  #other-zh.row.pb-4(v-if="selectedTypeZh === 'other'")
+  .other.row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.trackCount]
     .col-12.col-md-9
-      input.form-control(type="number" min="1" max="20" step="1" value="5" onChange="onTrackChangeZh(this)")
+      input.tracks.form-control(type="number" name="tracks" min="1" max="20" step="1" value="5")
   .row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.musicLength]
     .col-12.col-md-9
-      input.form-control(type="number" min="0.5" max="15" step="0.5" value="3" onChange="onMinuteChangeZh(this)")
+      input.minutes.form-control(type="number" name="minutes" min="0.5" max="15" step="0.5" value="3")
   .row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.currency]
     .col-12.col-md-9
-      input#ntd-zh.form-check-input(type="radio" name="currency-zh" value="ntd" onClick="onCurrencyChangeZh(this)" checked)
+      input.currency.form-check-input(type="radio" name="currency" value="ntd" checked)
       label.form-check-label(for="ntd") #[:t(lang="zh-TW") priceTool.ntd]
-      input#usd-zh.form-check-input(type="radio" name="currency-zh" value="usd" onClick="onCurrencyChangeZh(this)")
+      input.currency.form-check-input(type="radio" name="currency" value="usd")
       label.form-check-label(for="usd") #[:t(lang="zh-TW") priceTool.usd]
   .row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.estimatedPrice]
-    .col-12.col-md-9: h4#total-zh
+    .col-12.col-md-9: h4.total
 
   style.
     #price-tool-zh input,
@@ -67,81 +67,5 @@
       }
     }
 
-  script.
-    const originalOptionsZh = [
-      { value: true, price: { ntd: 200, usd: 8 } },
-      { value: false, price: { ntd: 100, usd: 4 } },
-    ]
-
-    const typeOptionsZh = [
-      { value: 'piano', tracksZh: 1 },
-      { value: 'orchestra', tracksZh: 20 },
-      { value: 'pop', tracksZh: 6 },
-      { value: 'other',},
-    ]
-
-    const commercialOptionsZh = [
-      { value: 'none', ratio: 1 },
-      { value: 'personal', ratio: 1.5 },
-      { value: 'full', ratio: 2 },
-    ]
-
-    let selectedOriginalZh = true
-    let selectedTypeZh = 'piano'
-    let minutesZh = 3
-    let tracksZh = 5
-    let selectedCommercialZh = 'none'
-    let isPerpetualZh = false
-    let selectedCurrencyZh = 'ntd'
-    const priceEstimationZh = function() {
-      const price = originalOptionsZh.find(o => o.value === selectedOriginalZh)?.price
-      const priceSingle = price?.[selectedCurrencyZh] || 0
-      const typeTracks = typeOptionsZh.find(o => o.value === selectedTypeZh)?.tracksZh
-      const trackCount = 2 + Math.min(8, typeTracks || tracksZh)
-      const minuteCount = 1 + Number(minutesZh)
-      const commercialRatio = !selectedOriginalZh ? 1 : commercialOptionsZh.find(o => o.value === selectedCommercialZh)?.ratio
-      const ratio = commercialRatio * (isPerpetualZh ? 3 : 1)
-      const final = priceSingle * trackCount * minuteCount * ratio
-      document.getElementById('total-zh').innerText = `${selectedCurrencyZh.toUpperCase()}\$ ${final}`
-    }
-    const onOriginalClickZh = function(e) {
-      selectedOriginalZh = e.value === 'true'
-      if (!selectedOriginalZh) {
-        document.getElementById('personal-input-zh').style.display = 'none'
-        document.getElementById('full-input-zh').style.display = 'none'
-        selectedCommercialZh = 'none'
-        document.getElementById('none-zh').checked = true
-      } else {
-        document.getElementById('personal-input-zh').style.display = 'inline-block'
-        document.getElementById('full-input-zh').style.display = 'inline-block'
-      }
-      priceEstimationZh()
-    }
-    const onCommercialClickZh = function(e) {
-      selectedCommercialZh = e.value
-      priceEstimationZh()
-    }
-    const onPerpetualClickZh = function(e) {
-      isPerpetualZh = e.checked
-      priceEstimationZh()
-    }
-    const onTypeChangeZh = function(e) {
-      selectedTypeZh = e.value
-      if (selectedTypeZh === 'other') document.getElementById('other-zh').style.display = 'flex'
-      else document.getElementById('other-zh').style.display = 'none'
-      priceEstimationZh()
-    }
-    const onTrackChangeZh = function(e) {
-      tracksZh = e.value
-      priceEstimationZh()
-    }
-    const onMinuteChangeZh = function(e) {
-      minutesZh = e.value
-      priceEstimationZh()
-    }
-    const onCurrencyChangeZh = function(e) {
-      selectedCurrencyZh = e.value
-      priceEstimationZh()
-    }
-    document.getElementById('other-zh').style.display = 'none'
-    priceEstimationZh()
+  include pricetool.js.pug
+  +PriceTool('zh')
