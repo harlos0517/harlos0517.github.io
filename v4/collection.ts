@@ -28,6 +28,8 @@ export const works = [
   { type: 'original', name: 'Origin of the Winds (Chamber)', musescore: 'https://musescore.com/user/290451/scores/6579664' },
   { type: 'original', name: 'Fiery Phoenix Queen (The Day of The Phoenix) - KFP (mutual work)', youtube: 'https://youtu.be/n0bWcxMAiY4', musescore: 'https://musescore.com/user/290451/scores/6863066' },
 
+  { type: 'orchestraarr', name: 'ここから、ここから - ヒゲドライバー/ヒゲドライVAN', youtube: 'https://youtu.be/Xmg3N5rk464' },
+  { type: 'orchestraarr', name: '3 MILLION SUBSCRIBERS 3 MILLION NOTES - Sheet Music Boss', youtube: 'https://youtu.be/Xmg3N5rk464', musescore: 'https://musescore.com/user/290451/scores/12686935' },
   { type: 'orchestraarr', name: 'Nine Point Eight - Mili', youtube: 'https://youtu.be/nrmnHo-aXz8' },
   { type: 'orchestraarr', name: 'The Phoenix (Orchestral Suite from Takanashi Kiara)', youtube: 'https://youtu.be/bDkLQRXu-HU', musescore: 'https://musescore.com/user/290451/scores/8172327' },
   { type: 'orchestraarr', name: 'The Phoenix Will Go On (from HINOTORI - Takanashi Kiara/五条下位)', musescore: 'https://musescore.com/user/290451/scores/6799869' },
@@ -35,6 +37,7 @@ export const works = [
   { type: 'orchestraarr', name: 'DO U - Takanashi Kiara', youtube: 'https://youtu.be/QuZRjmUx7M4', musescore: 'https://musescore.com/user/290451/scores/8900706' },
   { type: 'orchestraarr', name: 'Diamond City Lights - Lazulight', youtube: 'https://youtu.be/Dj0ft4SpMNc', musescore: 'https://musescore.com/user/290451/scores/9749077' },
 
+  { type: 'windbandarr', name: '築夢之路 - 天璇 Merak ', youtube: 'https://youtu.be/-ejAZXnl9ao', musescore: 'https://musescore.com/user/290451/scores/14438428' },
   { type: 'windbandarr', name: 'Taiwanese Folk Song Suite', youtube: 'https://youtu.be/2q1-oNGyQNA', musescore: 'https://musescore.com/user/290451/scores/5461968' },
   { type: 'windbandarr', name: '成名在望 - 五月天', youtube: 'https://youtu.be/qe38wwjGW7I', musescore: 'https://musescore.com/user/290451/scores/5482144' },
   { type: 'windbandarr', name: 'Baba Yetu (Civilization 4 Theme) - Christopher Tin', musescore: 'https://musescore.com/user/290451/scores/5542450' },
@@ -55,6 +58,7 @@ export const works = [
 
   { type: 'accomp', name: '心做し (kokoronashi) - papiyon (蝶々P) (Piano & Strings Accompaniment)', youtube: 'https://youtu.be/oq0SiF6CWWE', musescore: 'https://musescore.com/user/290451/scores/9580435' },
 
+  { type: 'pianocover', name: 'Anime Piano Cover Collection | 動漫鋼琴 Cover 合輯', youtube: 'https://youtu.be/OBXk4XKxb_c' },
   { type: 'pianocover', name: 'SPARKS - Takanashi Kiara', youtube: 'https://youtu.be/DMdNnHve8mU' },
   { type: 'pianocover', name: 'SPARKS (Melancholic Ver.) - Takanashi Kiara', youtube: 'https://youtu.be/_1Jyw5Hrrqc' },
   { type: 'pianocover', name: 'ALiCE&u - Ayunda Risu / Feryquitous', youtube: 'https://youtu.be/1yvW5GtfG4E' },
