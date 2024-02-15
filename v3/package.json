@@ -18,10 +18,10 @@
     "node-sass": "^6.0.0",
     "nuxt": "^2.15.8",
     "sass-loader": "^10.1.1",
-    "vue": "2.7.10",
+    "vue": "2.7.16",
     "vue-cli-plugin-pug": "^2.0.0",
-    "vue-server-renderer": "2.7.10",
-    "vue-template-compiler": "2.7.10",
+    "vue-server-renderer": "2.7.16",
+    "vue-template-compiler": "2.7.16",
     "webpack": "^4.46.0"
   },
   "devDependencies": {

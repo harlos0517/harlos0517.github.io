@@ -53,7 +53,7 @@ export default {
   },
 
   generate: {
-    dir: '../docs',
+    dir: '../docs/v3',
   },
 
   i18n: {
@@ -68,5 +68,9 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
     },
+  },
+
+  router: {
+    base: '/v3',
   },
 }
