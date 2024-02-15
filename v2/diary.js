@@ -63,3 +63,5 @@ $('#diary>.content>.back').$e('click',function(){
 	$('#diary>.list').$tc('hide',false)
 	$('#diary>.content').$tc('show',false)
 })
+
+updateDiary()
