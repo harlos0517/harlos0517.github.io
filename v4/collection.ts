@@ -18,6 +18,8 @@ export const types = [
 
 
 export const works = [
+  { type: 'original', name: '神話 Myth', youtube: 'https://youtu.be/8EyXnvjysZ4' },
+  { type: 'original', name: '傳說 Legend', youtube: 'https://youtu.be/TX2VKDkIT_I' },
   { type: 'original', name: 'KiaraAlter BGM', youtube: 'https://youtu.be/qFEwRpiRMW4' },
   { type: 'original', name: '遙觀星象 (ゆらり星を眺める) - Stargazers (夏語遙 YAO AI Ver.)', youtube: 'https://youtu.be/2HxwV5iEhSk' },
   { type: 'original', name: '遙觀星象 (ゆらり星を眺める) - Stargazers', youtube: 'https://youtu.be/NQdxwDt-TZ0' },
@@ -28,7 +30,7 @@ export const works = [
   { type: 'original', name: 'Origin of the Winds (Chamber)', musescore: 'https://musescore.com/user/290451/scores/6579664' },
   { type: 'original', name: 'Fiery Phoenix Queen (The Day of The Phoenix) - KFP (mutual work)', youtube: 'https://youtu.be/n0bWcxMAiY4', musescore: 'https://musescore.com/user/290451/scores/6863066' },
 
-  { type: 'orchestraarr', name: 'ここから、ここから - ヒゲドライバー/ヒゲドライVAN', youtube: 'https://youtu.be/Xmg3N5rk464' },
+  { type: 'orchestraarr', name: 'ここから、ここから - ヒゲドライバー/ヒゲドライVAN', youtube: 'https://youtu.be/R-ABLcGmuHw' },
   { type: 'orchestraarr', name: '3 MILLION SUBSCRIBERS 3 MILLION NOTES - Sheet Music Boss', youtube: 'https://youtu.be/Xmg3N5rk464', musescore: 'https://musescore.com/user/290451/scores/12686935' },
   { type: 'orchestraarr', name: 'Nine Point Eight - Mili', youtube: 'https://youtu.be/nrmnHo-aXz8' },
   { type: 'orchestraarr', name: 'The Phoenix (Orchestral Suite from Takanashi Kiara)', youtube: 'https://youtu.be/bDkLQRXu-HU', musescore: 'https://musescore.com/user/290451/scores/8172327' },
@@ -45,6 +47,7 @@ export const works = [
 
   { type: 'chamberarr', name: '紅蓮華 (鬼滅之刃 OP) - 草野華余子/LiSA (打擊八重奏)', musescore: 'https://musescore.com/user/290451/scores/6376177' },
 
+  { type: 'pianoarr', name: 'mumei - TKN / Nanashi Mumei', musescore: 'https://musescore.com/user/290451/scores/15568954' },
   { type: 'pianoarr', name: 'Altale - 削除 (Piano Duet)', youtube: 'https://youtu.be/dvs0XYU9osU', musescore: 'https://musescore.com/user/290451/scores/5151406' },
   { type: 'pianoarr', name: 'Chicken Attack - Takeo Ischi', youtube: 'https://youtu.be/imna2bJNTpg', musescore: 'https://musescore.com/user/290451/scores/5384667' },
   { type: 'pianoarr', name: '僕が死のうと思うたのは - amazarashi', youtube: 'https://youtu.be/4cU4D4lgWQ8', musescore: 'https://musescore.com/user/290451/scores/5163003' },

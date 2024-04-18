@@ -2,25 +2,25 @@ form#price-tool-en.price-tool
   .row
     .col-12.col-md-3.py-2 #[:t(lang="en") priceTool.commissionType]
     .col-12.col-md-9
-      input.original.form-check-input(type="radio" name="original" value="true" checked)
-      label.form-check-label(for="original") #[:t(lang="en") priceTool.original]
-      input.arrange.form-check-input(type="radio" name="original" value="false")
-      label.form-check-label(for="arrange") #[:t(lang="en") priceTool.arrangement]
+      input#original-en.original.form-check-input(type="radio" name="original" value="true" checked)
+      label.form-check-label(for="original-en") #[:t(lang="en") priceTool.original]
+      input#arrange-en.arrange.form-check-input(type="radio" name="original" value="false")
+      label.form-check-label(for="arrange-en") #[:t(lang="en") priceTool.arrangement]
   .row.pb-4
     .col-12.col-md-3.py-2
     .long.col-12.col-md-9
       span
-        input.commercial.none.form-check-input(type="radio" name="commercial" value="none" checked)
-        label.form-check-label(for="none") #[:t(lang="en") priceTool.none]
+        input#none-en.commercial.none.form-check-input(type="radio" name="commercial" value="none" checked)
+        label.form-check-label(for="none-en") #[:t(lang="en") priceTool.none]
       span.commercial-personal
-        input.commercial.form-check-input(type="radio" name="commercial" value="personal")
-        label.form-check-label(for="personal") #[:t(lang="en") priceTool.personal]
+        input#personal-en.commercial.form-check-input(type="radio" name="commercial" value="personal")
+        label.form-check-label(for="personal-en") #[:t(lang="en") priceTool.personal]
       span.commercial-full
-        input.commercial.form-check-input(type="radio" name="commercial" value="full")
-        label.form-check-label(for="full") #[:t(lang="en") priceTool.full]
+        input#full-en.commercial.form-check-input(type="radio" name="commercial" value="full")
+        label.form-check-label(for="full-en") #[:t(lang="en") priceTool.full]
       span
-        input.perpetual.form-check-input.d-inline-block(type="checkbox" name="perpetual")
-        label(for="perpetual") #[:t(lang="en") priceTool.perpetual]
+        input#perpetual-en.perpetual.form-check-input.d-inline-block(type="checkbox" name="perpetual")
+        label(for="perpetual-en") #[:t(lang="en") priceTool.perpetual]
   .row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="en") priceTool.musicType]
     .col-12.col-md-9
@@ -40,10 +40,10 @@ form#price-tool-en.price-tool
   .row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="en") priceTool.currency]
     .col-12.col-md-9
-      input.currency.form-check-input(type="radio" name="currency" value="ntd")
-      label.form-check-label(for="ntd") #[:t(lang="en") priceTool.ntd]
-      input.currency.form-check-input(type="radio" name="currency" value="usd" checked)
-      label.form-check-label(for="usd") #[:t(lang="en") priceTool.usd]
+      input#ntd-en.currency.form-check-input(type="radio" name="currency" value="ntd")
+      label.form-check-label(for="ntd-en") #[:t(lang="en") priceTool.ntd]
+      input#usd-en.currency.form-check-input(type="radio" name="currency" value="usd" checked)
+      label.form-check-label(for="usd-en") #[:t(lang="en") priceTool.usd]
   .row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="en") priceTool.estimatedPrice]
     .col-12.col-md-9: h4.total
