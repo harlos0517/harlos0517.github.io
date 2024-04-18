@@ -2,25 +2,25 @@ form#price-tool-zh.price-tool
   .row
     .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.commissionType]
     .col-12.col-md-9
-      input.original.form-check-input(type="radio" name="original" value="true" checked)
-      label.form-check-label(for="original") #[:t(lang="zh-TW") priceTool.original]
-      input.arrange.form-check-input(type="radio" name="original" value="false")
-      label.form-check-label(for="arrange") #[:t(lang="zh-TW") priceTool.arrangement]
+      input#original-zh.original.form-check-input(type="radio" name="original" value="true" checked)
+      label.form-check-label(for="original-zh") #[:t(lang="zh-TW") priceTool.original]
+      input#arrange-zh.arrange.form-check-input(type="radio" name="original" value="false")
+      label.form-check-label(for="arrange-zh") #[:t(lang="zh-TW") priceTool.arrangement]
   .row.pb-4
     .col-12.col-md-3.py-2
     .long.col-12.col-md-9
       span
-        input.commercial.none.form-check-input(type="radio" name="commercial" value="none" checked)
-        label.form-check-label(for="none") #[:t(lang="zh-TW") priceTool.none]
+        input#none-zh.commercial.none.form-check-input(type="radio" name="commercial" value="none" checked)
+        label.form-check-label(for="none-zh") #[:t(lang="zh-TW") priceTool.none]
       span.commercial-personal
-        input.commercial.form-check-input(type="radio" name="commercial" value="personal")
-        label.form-check-label(for="personal") #[:t(lang="zh-TW") priceTool.personal]
+        input#personal-zh.commercial.form-check-input(type="radio" name="commercial" value="personal")
+        label.form-check-label(for="personal-zh") #[:t(lang="zh-TW") priceTool.personal]
       span.commercial-full
-        input.commercial.form-check-input(type="radio" name="commercial" value="full")
-        label.form-check-label(for="full") #[:t(lang="zh-TW") priceTool.full]
+        input#full-zh.commercial.form-check-input(type="radio" name="commercial" value="full")
+        label.form-check-label(for="full-zh") #[:t(lang="zh-TW") priceTool.full]
       span
-        input.perpetual.form-check-input.d-inline-block(type="checkbox" name="perpetual")
-        label(for="perpetual") #[:t(lang="zh-TW") priceTool.perpetual]
+        input#perpetual-zh.perpetual.form-check-input.d-inline-block(type="checkbox" name="perpetual")
+        label(for="perpetual-zh") #[:t(lang="zh-TW") priceTool.perpetual]
   .row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.musicType]
     .col-12.col-md-9
@@ -40,10 +40,10 @@ form#price-tool-zh.price-tool
   .row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.currency]
     .col-12.col-md-9
-      input.currency.form-check-input(type="radio" name="currency" value="ntd" checked)
-      label.form-check-label(for="ntd") #[:t(lang="zh-TW") priceTool.ntd]
-      input.currency.form-check-input(type="radio" name="currency" value="usd")
-      label.form-check-label(for="usd") #[:t(lang="zh-TW") priceTool.usd]
+      input#ntd-zh.currency.form-check-input(type="radio" name="currency" value="ntd" checked)
+      label.form-check-label(for="ntd-zh") #[:t(lang="zh-TW") priceTool.ntd]
+      input#usd-zh.currency.form-check-input(type="radio" name="currency" value="usd")
+      label.form-check-label(for="usd-zh") #[:t(lang="zh-TW") priceTool.usd]
   .row.pb-4
     .col-12.col-md-3.py-2 #[:t(lang="zh-TW") priceTool.estimatedPrice]
     .col-12.col-md-9: h4.total

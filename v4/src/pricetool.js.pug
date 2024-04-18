@@ -7,8 +7,8 @@ mixin PriceTool(lang)
       const f_ = form.querySelectorAll.bind(form)
 
       const originalOptions = {
-        true: { ntd: 200, usd: 8 },
-        false: { ntd: 100, usd: 4 },
+        true: { ntd: 240, usd: 9 },
+        false: { ntd: 160, usd: 6 },
       }
 
       const typeOptions = {
@@ -39,7 +39,7 @@ mixin PriceTool(lang)
         const priceSingle = price?.[selectedCurrency] || 0
         const typeTracks = typeOptions[selectedType] || null
         const trackCount = 2 + Math.min(8, typeTracks || tracks || 0)
-        const minuteCount = 1 + Number(minutes)
+        const minuteCount = 2 + Number(minutes)
         const commercialRatio = selectedOriginal === 'false'
           ? 1
           : commercialOptions[selectedCommercial] || 1
