@@ -32,7 +32,7 @@
 #intro .links div > a:not(:last-child) {
   margin-right: 3rem;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   #intro .links div:not(:last-child) {
     margin-right: 1.5rem;
   }
@@ -43,6 +43,7 @@
 @media screen and (max-width: 768px) {
   #intro .links {
     flex-direction: column;
+    align-items: center;
   }
   #intro .links div:not(:last-child) {
     margin-right: 0;
@@ -82,6 +83,15 @@
 }
 #intro .links .opay:hover {
   color: #227BBB;
+}
+#intro .links .plurk:hover {
+  color: #FF574D;
+}
+#intro .links .marshmallow:hover {
+  color: #F3969A;
+}
+#intro .links .instagram:hover {
+  color: #C13584;
 }
 #intro .more a:first-child {
   margin-right: 200px;
