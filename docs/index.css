@@ -1,6 +1,6 @@
 #intro {
   font-weight: 700;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 #intro > * {
   filter: drop-shadow(0 0 4px black);
@@ -118,12 +118,12 @@
 
 #about {
   font-weight: 700;
-  min-height: 100vh;
-  padding-top: 6.25vh;
+  min-height: 100dvh;
+  padding-top: 6.25dvh;
 }
 #about > .block {
-  height: 25vh;
-  margin-bottom: 6.25vh;
+  height: 25dvh;
+  margin-bottom: 6.25dvh;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -167,5 +167,5 @@
 }
 
 #blank {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
