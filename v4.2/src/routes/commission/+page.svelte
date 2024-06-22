@@ -8,6 +8,7 @@ import WarningIcon from '$lib/icons/warning.svg?raw'
 import MusicNoteIcon from '$lib/icons/musicnote.svg?raw'
 
 import PriceTool from '$lib/components/priceTool.svelte'
+import CommissionTable from '$lib/components/commissionTable.svelte'
 
 const commissionList = [
   { key: 'originalMusic', link: 'https://youtu.be/keNRuTFXM6M' },
@@ -115,21 +116,24 @@ const styleList = [
           h5.collapse-title: b {$t('commission.after')}
           .collapse-content
             p {$t('commission.afterDesc')}
-  .min-h-dvh
+    .my-8
+      h2.py-8.px-12.text-center.text-4xl.leading-tight
+        | {$t('commission.commercialPerpetualTitle')}
+      CommissionTable
 </template>
 
 <style lang="sass">
 ul
   list-style: disc
-#back :global(svg)
-  width: 1.5rem
-  height: 1.5rem
-
-ul
   margin: 0
   padding-left: 30px
 li
   margin: .5rem 0
+
+#back :global(svg)
+  width: 1.5rem
+  height: 1.5rem
+
 .process-list
   counter-reset: section
   & > li

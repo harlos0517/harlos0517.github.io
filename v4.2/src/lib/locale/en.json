@@ -67,7 +67,7 @@
 
 	"commission.priceDisclaimer": "Estimated Price is not the quoted price; the quote price is subject to the outcome of discussion.",
 
-	"commission.commercialPerpetualTitle": "About Commercial/Perpetual Commissions",
+	"commission.commercialPerpetualTitle": "About Commercial / Perpetual Commissions",
 	"commission.noComNoPer": "Non-commercial, non-perpetual",
 	"commission.comNoPer": "Commercial, non-perpetual",
 	"commission.noComPer": "Non-commercial, perpetual",
@@ -86,12 +86,12 @@
 	"commission.submit": "Submit to other events or competitions",
 	"commission.publish": "Publicize",
 	"commission.publishPersonally": "Publicize on personal account",
-	"commission.share": "Share to personal account <b>AFTER you have publicized</b>",
+	"commission.share": "Share to personal account AFTER you have publicized",
 	"commission.preserveCopyright": "Retain moral rights but do not exercise them",
 	"commission.getFiles": "Demand for musicsheet file, mixing project file and raw track files",
 	"commission.publicProcessInAdvance": "Publicize/Stream the commission process in advance",
 	"commission.publicProcess": "Publicize/Stream the commission process",
-	"commission.putInCollection": "Put it my collection",
+	"commission.putInCollection": "Put it in my collection",
 	"commission.credit": "(crediting me)",
 	"commission.sayYouDidIt": "Claim it as your own work",
 
