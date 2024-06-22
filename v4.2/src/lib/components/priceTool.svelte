@@ -53,11 +53,12 @@ $: {
 
 const fontSizeA = isEn ? 'font-size: min(4vw, 80px)' : 'font-size: min(5vw, 100px)'
 const fontSizeB = isEn ? 'font-size: min(5vw, 100px)' : 'font-size: min(8vw, 160px)'
-
+const oneLineClass = isEn ? '' : 'md:flex'
+const twoLineClass = isEn ? '' : 'md:hidden'
 </script>
 
 <template lang="pug">
-.hidden.flex-row.justify-between.font-bold(class:md:flex="{!isEn}" style="font-size: min(3vw, 60px)")
+.hidden.flex-row.justify-between.font-bold(class="{oneLineClass}" style="font-size: min(3vw, 60px)")
   .leading-normal {$t('priceTool.iWant')}
   SlotMachineText(options="{lengthOptions}" bind:currentOption="{currentLength}")
   .leading-normal {$t('priceTool.minute')}
@@ -65,12 +66,12 @@ const fontSizeB = isEn ? 'font-size: min(5vw, 100px)' : 'font-size: min(8vw, 160
   SlotMachineText(options="{typeOptions}" bind:currentOption="{currentType}")
   SlotMachineText(options="{originalOptions}" bind:currentOption="{currentOriginal}")
   .leading-normal {$t('priceTool.music')}
-.flex.flex-row.justify-between.font-bold(class:md:hidden="{!isEn}" style="{fontSizeA}")
+.flex.flex-row.justify-between.font-bold(class="{twoLineClass}" style="{fontSizeA}")
   .leading-normal {$t('priceTool.iWant')}
   SlotMachineText(options="{lengthOptions}" bind:currentOption="{currentLength}")
   .leading-normal {$t('priceTool.minute')}
   SlotMachineText(options="{commercialOptions}" bind:currentOption="{currentCommercial}")
-.flex.flex-row.justify-between.font-bold.my-2(class:md:hidden="{!isEn}" style="{fontSizeB}")
+.flex.flex-row.justify-between.font-bold.my-2(class="{twoLineClass}" style="{fontSizeB}")
   SlotMachineText(options="{typeOptions}" bind:currentOption="{currentType}")
   SlotMachineText(options="{originalOptions}" bind:currentOption="{currentOriginal}")
   .leading-normal {$t('priceTool.music')}
