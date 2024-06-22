@@ -58,6 +58,8 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.*
+!.env.example
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -91,3 +93,11 @@ sw.*
 *.swp
 
 *.pds
+
+# Nuxt 3 dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
