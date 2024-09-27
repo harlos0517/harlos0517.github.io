@@ -48,7 +48,7 @@ const styleList = [
               br
               small {$t('commission.harlosMusicCommission', { locale: 'en' })}
       .my-8
-        .my-4.grid.grid-cols-1.gap-4.text-3xl(class="md:grid-cols-2")
+        .my-4.grid.grid-cols-1.gap-4.text-3xl(class="md:grid-cols-2 lg:grid-cols-4")
           +each('commissionList as item')
             a.block.h-24.text-center.flex.flex-col.justify-center.rounded-xl.border.transition-all.duration-200(
               href=" {item.link}"
@@ -84,6 +84,10 @@ const styleList = [
           h5.collapse-title: b {$t('commission.discussion')}
           .collapse-content
             p {$t('commission.discussionDesc')}
+            p.text-xs
+              | Discord: @harlos_0517 / Twitter: 
+              |
+              a.text-sky-200(target="_blank" href="https://x.com/Harlos_Music") @Harlos_Music
             ul
               li {$t('commission.yourName')}
               li {$t('commission.email')}
@@ -93,7 +97,6 @@ const styleList = [
               li {$t('commission.musicStyle')}
               li {$t('commission.useInstrument')}
               li {$t('commission.reference')}
-              li {$t('commission.mixing')}
               li {$t('commission.other')}
               li {$t('commission.deadline')}
         li.collapse
@@ -101,6 +104,7 @@ const styleList = [
           h5.collapse-title: b {$t('commission.deposit')}
           .collapse-content
             p {$t('commission.depositDesc')}
+            p {$t('commission.payment')}
         li.collapse
           input(type="checkbox")
           h5.collapse-title: b {$t('commission.draft')}
@@ -120,6 +124,8 @@ const styleList = [
       h2.py-8.px-12.text-center.text-4xl.leading-tight
         | {$t('commission.commercialPerpetualTitle')}
       CommissionTable
+      .alert.alert-warning.rounded-lg.border-white.bg-yellow-900.text-white.my-4(role="alert")
+        | {$t('commission.perpetualDisclaimer')}
 </template>
 
 <style lang="sass">
@@ -137,7 +143,7 @@ li
 .process-list
   counter-reset: section
   & > li
-    overflow: initial
+    overflow: hidden
   & > li::before
     counter-increment: section
     content: counter(section)
@@ -163,6 +169,7 @@ li
     content: ''
     border-radius: 8px
     background-color: #FFFFFF22
+    pointer-events: none
   & > li:hover::after
     background-color: #FFFFFF44
   .collapse-title

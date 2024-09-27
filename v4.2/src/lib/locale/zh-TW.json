@@ -54,12 +54,12 @@
 	"commission.musicStyle": "想要的音樂風格：(音樂類別、或是用一些形容詞也可以)",
 	"commission.useInstrument": "特別想要使用的樂器：",
 	"commission.reference": "參考用樂曲：(有的話幫助會非常大)",
-	"commission.mixing": "混音需求：",
 	"commission.other": "其他需求：",
 	"commission.deadline": "截止日期：",
 
-	"commission.depositDesc": "我方將討論結果與報價以 Email 寄出，在您支付訂金後請回信確認，我方即開始製作。訂金為總委託金額之一半，若未滿一千則以一千計。一旦繳付訂金後，若又反悔取消委託，將不返還訂金。",
-	"commission.draftDesc": "會將樂曲大致輪廓完成時給予試聽。有兩次修改機會，若仍不滿意，訂金不會退還。",
+	"commission.depositDesc": "我方將討論結果、製作時間與報價以 Email 寄出，在您支付訂金後請回信確認，我方即開始製作。訂金為總委託金額之一半，若未滿 1000 則以 1000 計。一旦繳付訂金後，若又反悔取消委託，將不返還訂金。",
+	"commission.payment": "您可選擇以轉帳 (台灣)、Paypal (海外，視情況需補手續費) 或是斗內平台 (山羌互動、Ko-fi) 付款。",
+	"commission.draftDesc": "樂曲接近完成時，將寄送檔案供試聽。有兩次修改機會，可能會延後完稿時間。若仍不滿意，訂金不會退還。",
 	"commission.completeDesc": "接近完成時，會需要您支付尾款，我方即可在完成後以 Email 或雲端硬碟交件。請務必回信表示已收到檔案。若檔案過大會以雲端硬碟傳送，確認收到後不得再次索取，請妥善保存。",
 	"commission.afterDesc": "若事後有額外用途的需求 (例如：非商業委託需做商業使用)，可以加價購買授權。",
 
@@ -70,7 +70,7 @@
 	"commission.comNoPer": "商業、不買斷",
 	"commission.noComPer": "非商業、買斷",
 	"commission.comPer": "商業、買斷",
-	"commission.fullPer": "全買斷 (未開放)",
+	"commission.fullPer": "全買斷",
 	"commission.price": "定價",
 	"commission.iCan": "我可以",
 	"commission.iCant": "我不可以",
@@ -93,6 +93,7 @@
 	"commission.credit": "(必須標註我的名字)",
 	"commission.sayYouDidIt": "說這是你自己的作品",
 
+	"commission.perpetualDisclaimer": "若有買斷需求，授權項目與報價可議。",
 
 	"priceTool.original": "原創",
 	"priceTool.arrangement": "改編",

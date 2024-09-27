@@ -80,7 +80,4 @@ const twoLineClass = isEn ? '' : 'md:hidden'
   .leading-normal {price}
 .alert.alert-warning.rounded-lg.border-white.bg-yellow-900.text-white.my-4(role="alert")
   | {$t('commission.priceDisclaimer')}
-
-//- h3.text-2xl {$t('commission.commercialPerpetualTitle')}
-//- CommissionTable
 </template>
