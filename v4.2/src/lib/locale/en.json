@@ -56,11 +56,11 @@
 	"commission.musicStyle": "Preferred Music style: (Genres or adjectives)",
 	"commission.useInstrument": "Preferred instruments: ",
 	"commission.reference": "Reference Song/Piece: (would be very helpful if provided)",
-	"commission.mixing": "Mixing needs: ",
 	"commission.other": "Other: ",
 	"commission.deadline": "Deadline: ",
 
-	"commission.depositDesc": "After the discussion, I will send you the quote via Email. Please reply to confirm after you have paid the deposit. The deposit is half of the total commission price, or 30 USD if the total is less than 60 NTD. Once the deposit is paid, it will not be refunded if you cancel the commission.",
+	"commission.depositDesc": "After the discussion, I will send you the quote via Email. Please reply to confirm after you have paid the deposit. The deposit is half of the total commission price, or 30 USD if the total is less than 60 USD. Once the deposit is paid, it will not be refunded if you cancel the commission.",
+	"commission.payment": "You can choose to pay via bank transfer (Taiwan), Paypal (overseas, additional fee may apply) or donation platform like Deerdonate and Ko-fi.",
 	"commission.draftDesc": "I will provide a draft preview of the music. You have two chances to request for modification. If you are still not satisfied, the deposit will not be refunded.",
 	"commission.completeDesc": "When the work is near completion, you will need to make the final payment. I will send the files via Email or Google Drive after the completion. Please reply to confirm that you have received the files. If the files are too large, they will be sent via Google Drive. Once you have confirmed receving, you cannot request for the files again, so please keep them safe.",
 	"commission.afterDesc": "If you have other usages for the work (e.g. commercial use for non-commercial commission), you can purchase the license for an additional fee.",
@@ -72,7 +72,7 @@
 	"commission.comNoPer": "Commercial, non-perpetual",
 	"commission.noComPer": "Non-commercial, perpetual",
 	"commission.comPer": "Commercial, perpetual",
-	"commission.fullPer": "Full Perpetual (not opened)",
+	"commission.fullPer": "Full Perpetual",
 	"commission.price": "Basic price",
 	"commission.iCan": "I can",
 	"commission.iCant": "I cannot",
@@ -94,6 +94,10 @@
 	"commission.putInCollection": "Put it in my collection",
 	"commission.credit": "(crediting me)",
 	"commission.sayYouDidIt": "Claim it as your own work",
+
+	"commission.perpetualDisclaimer": "For perpetual commissions, authorized usages and quote price can be discussed.",
+
+
 
 	"priceTool.original": "original",
 	"priceTool.arrangement": "arranged",
