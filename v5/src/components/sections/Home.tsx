@@ -6,6 +6,8 @@ import logoFull from '@/assets/images/logo-full.svg'
 import icon from '@/assets/images/icon.svg'
 import Divider from '@/components/Divider'
 import {
+  IconBrandInstagram,
+  IconBrandSoundcloud,
   IconBrandTwitterFilled,
   IconBrandYoutubeFilled,
   IconCoffee,
@@ -25,6 +27,15 @@ const Home: React.FC = () => {
     { to: '#commission', label: t('commission') },
   ]
 
+  const links = [
+    { element: IconBrandYoutubeFilled, link: 'https://www.youtube.com/@harlosmusic' },
+    { element: IconBrandTwitterFilled, link: 'https://twitter.com/harlosmusic' },
+    { element: IconBrandInstagram, link: 'https://www.instagram.com/harlos.music' },
+    { element: IconBrandSoundcloud, link: 'https://soundcloud.com/harlosmusic' },
+    { element: IconCoinFilled, link: 'https://www.hivebee.com.tw/harlosmusic/Donate' },
+    { element: IconCoffee, link: 'https://ko-fi.com/harlosmusic' },
+  ]
+
   return <Center id="home" bg="accent" h="100lvh" mih="20vw"
     style={{ flexDirection: 'column', gap: '2vw' }}
   >
@@ -42,18 +53,14 @@ const Home: React.FC = () => {
       ))}
     </Group>
     <Group>
-      <IconBrandYoutubeFilled size={24} color="white" style={{ cursor: 'pointer' }}
-        onClick={() => window.open('https://www.youtube.com/@harlosmusic', '_blank')}
-      />
-      <IconBrandTwitterFilled size={24} color="white" style={{ cursor: 'pointer' }}
-        onClick={() => window.open('https://twitter.com/harlosmusic', '_blank')}
-      />
-      <IconCoinFilled size={24} color="white" style={{ cursor: 'pointer' }}
-        onClick={() => window.open('https://www.hivebee.com.tw/harlosmusic/Donate', '_blank')}
-      />
-      <IconCoffee size={24} color="white" style={{ cursor: 'pointer' }}
-        onClick={() => window.open('https://ko-fi.com/harlosmusic', '_blank')}
-      />
+      {links.map(link => {
+        const Icon = link.element
+        return (
+          <Icon size={24} color="white" style={{ cursor: 'pointer' }}
+            onClick={() => window.open(link.link, '_blank')}
+          />
+        )
+      })}
     </Group>
   </Center>
 }
