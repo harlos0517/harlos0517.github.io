@@ -49,24 +49,24 @@ const Section: React.FC<{
 }
 
 const defaultWorks: PortfolioWork[] = [
-  { type: 'original', name: 'Origin of the Winds 風の起源', display: true,
-    youtube: 'keNRuTFXM6M', musescore: '10383688', tags: ['windband', 'original'] },
+  { type: 'original', name: '我不會寫歌 IDK How to Write a Song', display: true,
+    youtube: 'qKOUcLHIy4o', tags: ['original'] },
   { type: 'original', name: '神木 Sacred Tree', display: true,
     youtube: 'S1-8Tb9aSQg', tags: ['piano', 'strings', 'original'] },
-  { type: 'original', name: 'Dreamland Carnival 夢隙中的嘉年華', display: true,
-    soundcloud: 'dreamland-carnival', tags: ['orchestra', 'original', 'vtuber'] },
   { type: 'original', name: '壹仟零壹拾玖夜 One thousand and nineteen nights', display: true,
     youtube: 'dg9DvXDGQ9I', tags: ['citypop', 'pop', 'original'] },
+  { type: 'original', name: 'Origin of the Winds 風の起源', display: true,
+    youtube: 'keNRuTFXM6M', musescore: '10383688', tags: ['windband', 'original'] },
+  { type: 'orchestraarr', name: '璇音綺想', display: true,
+    artist: 'Merak 天璇', youtube: '5JFY90LZu9M', tags: ['orchestra', 'arrangement', 'vtuber'] },
   { type: 'orchestraarr', name: 'The Phoenix (Orchestral Suite from Takanashi Kiara) 2024 Remake', display: true,
     artist: 'Takanashi Kiara', youtube: '-1Sv_l-MAec', tags: ['orchestra', 'arrangement'] },
   { type: 'orchestraarr', name: '3 MILLION SUBSCRIBERS 3 MILLION NOTES', display: true,
     artist: 'Sheet Music Boss', youtube: 'Xmg3N5rk464', musescore: '12686935', tags: ['orchestra', 'arrangement'] },
   { type: 'pianoarr', name: 'KINGWORLD', display: true,
     artist: 'sasakure.UK / 白上フブキ', youtube: 'D0az5_0lpFc', musescore: '16191199', tags: ['piano', 'arrangement', 'vtuber'] },
-  { type: 'pianoarr', name: '僕が死のうと思うたのは The Reason Why I thought I\'d die', display: true,
-    artist: 'amazarashi', youtube: '4cU4D4lgWQ8', musescore: '5163003', tags: ['piano', 'arrangement'] },
-  { type: 'accomp', name: '心做し (kokoronashi)', display: true,
-    artist: 'papiyon (蝶々P)', youtube: 'oq0SiF6CWWE', musescore: '9580435', tags: ['piano', 'strings', 'arrangement', 'accompany'] },
+  { type: 'pianoarr', name: 'BunnyGirl', display: true,
+    artist: 'AKASAKI', musescore: '23706259', tags: ['piano', 'arrangement'] },
 ]
 
 const Portfolio: React.FC = () => {

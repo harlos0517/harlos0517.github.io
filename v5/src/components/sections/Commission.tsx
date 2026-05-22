@@ -15,7 +15,7 @@ const steps = [
 
 const Commission: React.FC = () => {
   const { t } = useTranslation()
-  const [active, setActive] = useState(1)
+  const [active, setActive] = useState(0)
 
   return <Box pos="relative">
     <Box id="commission" pos="absolute" top="-80px"/>
