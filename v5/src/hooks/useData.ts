@@ -24,16 +24,25 @@ export interface Tags {
   [key: string]: string
 }
 
+export interface QueueItem {
+  content: string
+  commissioner: string
+  user: string
+  progress: string
+}
+
 export enum Sheet {
   PORTFOLIO = 'PORTFOLIO',
   WORKTYPES = 'WORKTYPES',
   TAGS = 'TAGS',
+  QUEUE = 'QUEUE',
 }
 
 export interface DataTypeMap {
   [Sheet.PORTFOLIO]: PortfolioWork
   [Sheet.WORKTYPES]: WorkType
   [Sheet.TAGS]: Tags
+  [Sheet.QUEUE]: QueueItem
 }
 
 export const getData = async<Name extends Sheet>(sheet: Name) => {

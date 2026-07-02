@@ -1,42 +1,64 @@
-import { Box, Container, Stepper, Title, Image, Collapse } from '@mantine/core'
+import { Box, Container, Title, Button, Anchor, Group, Center, Text, Table } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
-import React, { useState } from 'react'
+import React from 'react'
 
-import IconSvg from '@/assets/images/icon.svg'
 import { DividerAccent } from '@/components/Divider'
-
-const steps = [
-  'discussion',
-  'deposit',
-  'draft',
-  'complete',
-  'after',
-]
+import useData, { Sheet } from '@/hooks/useData'
 
 const Commission: React.FC = () => {
   const { t } = useTranslation()
-  const [active, setActive] = useState(0)
+
+  const queue = useData(Sheet.QUEUE)
+    .filter(qi => qi.progress !== 'completed' && qi.progress !== 'cancelled')
+
+  const rows = queue.map((qi, i) => (
+    <Table.Tr key={i}>
+      <Table.Td>{qi.content}</Table.Td>
+      <Table.Td>{qi.commissioner}</Table.Td>
+      <Table.Td>{qi.user}</Table.Td>
+      <Table.Td>{t(`queue_${qi.progress}`)}</Table.Td>
+    </Table.Tr>
+  ))
 
   return <Box pos="relative">
     <Box id="commission" pos="absolute" top="-80px"/>
     <Container maw="640px" py="10vw" px="xl">
       <Title order={2} ta="center">{t('commission')}</Title>
       <DividerAccent />
-      <Stepper
-        active={active}
-        onStepClick={setActive}
-        orientation="vertical"
-        completedIcon={<Image src={IconSvg} alt="HARLOS" w={40} h={40} />}
-      >
-        {steps.map((step, i) => <Stepper.Step
-          key={step} label={t(step)}
-          styles={{
-            stepLabel: { marginTop: '0.7em' },
-            stepDescription: { lineHeight: 1.5, marginBottom: '1rem' },
-          }}
-          description={<Collapse in={i === active}>{t(`${step}Desc`)}</Collapse>}
-        />)}
-      </Stepper>
+      <Center>
+        <Group>
+          <Anchor
+            href="https://forms.gle/VJ1qX7cHmZKGEA2b7"
+            target="_blank"
+            rel="noopener noreferrer"
+            c="white"
+          >
+            <Button><Text c="white">{t('googleForm')}</Text></Button>
+          </Anchor>
+          <Anchor
+            href="https://vgen.co/harlos_music"
+            target="_blank"
+            rel="noopener noreferrer"
+            c="white"
+          >
+            <Button><Text c="white">{t('vgen')}</Text></Button>
+          </Anchor>
+        </Group>
+      </Center>
+      <Title order={3} ta="center" mt="xl" mb="md">{t('queueTitle')}</Title>
+      <Table highlightOnHover>
+        <Table.Thead>
+          <Table.Tr>
+            <Table.Th>{t('queueContent')}</Table.Th>
+            <Table.Th>{t('queueCommissioner')}</Table.Th>
+            <Table.Th>{t('queueUser')}</Table.Th>
+            <Table.Th>{t('queueProgress')}</Table.Th>
+          </Table.Tr>
+        </Table.Thead>
+        <Table.Tbody>
+          {rows}
+        </Table.Tbody>
+      </Table>
     </Container>
   </Box>
 }
