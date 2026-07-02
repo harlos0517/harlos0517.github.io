@@ -46,10 +46,24 @@ en:
       If you have additional needs afterwards
       (e.g., non-commercial commission needing commercial use),
       you can purchase a license for an additional fee.
+    googleForm: Google Form
+    vgen: VGen
+    queueTitle: Queue Status
+    queueContent: Content
+    queueCommissioner: Commissioner
+    queueUser: User
+    queueProgress: Progress
+    queue_discussing: Discussing
+    queue_paid: Deposit paid, queuing
+    queue_composing: Composing
+    queue_mixing: Mixing
+    queue_paused: Paused
+    queue_cancelled: Cancelled
+    queue_completed: Completed
     footerText: |-
       This website is built with TypeScript, React, Mantine UI, and Vite.
       Music made by Harlos Music.
-      Copyright © 2016 - 2025 Harlos Music. All rights reserved.
+      Copyright © 2016 - 2026 Harlos Music. All rights reserved.
 
 zh-TW:
   translation:
@@ -93,7 +107,21 @@ zh-TW:
       確認收到後不得再次索取，請妥善保存。
     afterDesc: |-
       若事後有額外用途的需求 (例如：非商業委託需做商業使用)，可以加價購買授權。
+    googleForm: Google 表單
+    vgen: VGen
+    queueTitle: 排單狀況
+    queueContent: 委託內容
+    queueCommissioner: 委託人
+    queueUser: 委託使用人
+    queueProgress: 進度
+    queue_discussing: 討論中
+    queue_paid: 已支付訂金並等待制作
+    queue_composing: 製作中
+    queue_mixing: 混音中
+    queue_paused: 暫停中
+    queue_cancelled: 已取消
+    queue_completed: 已完成
     footerText: |-
       本網站由 TypeScript、React、Mantine UI、Vite 製作
       音樂由 Harlos Music 創作
-      版權所有 © 2016 - 2025 Harlos Music，保留一切權利
+      版權所有 © 2016 - 2026 Harlos Music，保留一切權利
